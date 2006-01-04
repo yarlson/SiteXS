@@ -31,7 +31,7 @@ $message
 			<td><input maxlength="255" name="fields[title]" size="40" value="$data[title]" title="<?php echo __("Caption") ?>"></td>
 		</tr>
 		<tr id="trText">
-			<td><?php echo __("Текст") ?></td>
+			<td><?php echo __("Text") ?></td>
 			<td><textarea cols="40" name="fields[text]" rows="20">$data[text]</textarea><br><a href="#" onClick="return showVE('$data[id]', 'fields[text]');"><?php echo __("Visual editor") ?></a></td>
 		</tr>
 	</table>
