@@ -6,6 +6,7 @@
 	<link href="style.css" rel="stylesheet" type="text/css">
 	<meta name="description" content="<?php echo $ref->elements["description"] ?>">
 	<meta name="keywords" content="<?php echo $ref->elements["keywords"] ?>">
+    <meta http-equiv="content-type" content="text/html; charset=<?php echo $ref->config["charset"] ?>"> 
 </head>
 
 <body>

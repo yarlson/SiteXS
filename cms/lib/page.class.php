@@ -130,7 +130,7 @@ class page {
 			}
 			else {
 				header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
-				header("Content-Type: text/html; charset=windows-1251");
+				header("Content-Type: text/html; charset=".$this->config["charset"]);
 				header("HTTP/1.0 200 OK", true);
 			}
 		}
