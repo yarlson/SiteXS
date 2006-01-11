@@ -12,17 +12,15 @@ class elements {
 	}
 
 	function breadCrumbs () {
-		if ($this->properties["id"]!=1 && $this->properties["id"]!=6) {
-			$this->elements["breadCrumbs"]="<a href=\"/intro/\"><img src=\"/i/home.gif\" alt=\"\" width=22 height=20 border=0 vspace=5 hspace=5 align=\"absmiddle\">Сетевое &laquo;Я&raquo; Ярослава Кравцова</a>";
+		if ($this->properties["id"]!=1) {
+			$this->elements["breadCrumbs"]="";
 			$count=($this->dirs["root"] && count($this->dirs["url"])!=count($this->dirs["id"])) ? $this->dirs["count"] : $this->dirs["count"]-1;
 			for ($i=0; $i<$count; $i++) {
 				$url.=$this->dirs["url"][$i]."/";
-				$this->elements["breadCrumbs"].="&nbsp;<img src=\"/i/rarr.gif\" alt=\"\" width=\"9\" height=\"20\" border=\"0\" align=\"absmiddle\">&nbsp;<a href=\"/".$url."\">".$this->dirs["title"][$i]."</a>";
+				$this->elements["breadCrumbs"].="&nbsp;&rarr;&nbsp;<a href=\"/".$url."\">".$this->dirs["title"][$i]."</a>";
 			}
-			//if (!($this->dirs["root"] && count($this->dirs["url"])!=count($this->dirs["id"]))) $this->elements["breadCrumbs"].=$this->dirs["title"][$this->dirs["count"]-1];
-		}
-		else {
-			$this->elements["breadCrumbs"]="<img src=\"/i/dot.gif\" alt=\"\" width=\"1\" height=\"30\" border=\"0\">";
+			if (!($this->dirs["root"] && count($this->dirs["url"])!=count($this->dirs["id"]))) $this->elements["breadCrumbs"].="&nbsp;&rarr; ".$this->dirs["title"][$this->dirs["count"]-1];
+			$this->elements["breadCrumbs"]="<a href=\"/\">".__("Home")."</a>".$this->elements["breadCrumbs"];
 		}
 	}
 
