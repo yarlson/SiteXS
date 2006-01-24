@@ -2,7 +2,7 @@
 
 <html>
 <head>
-	<title><?php echo $ref->config["site_name"] ?></title>
+	<title><?php echo $ref->config["site_name"]." - ".$ref->elements["title"] ?></title>
 	<link href="style.css" rel="stylesheet" type="text/css">
 	<meta name="description" content="<?php echo $ref->elements["description"] ?>">
 	<meta name="keywords" content="<?php echo $ref->elements["keywords"] ?>">

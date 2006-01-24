@@ -18,13 +18,13 @@ class users {
 	function defaultAction () {
 		$chid=$this->chid;
 		$res=$this->db->query("select * from users order by name");
-		while ($data=$this->db->fetch_array($res)) {
+		while ($this->data=$this->db->fetch_array($res)) {
 			$i++;
-			$im=($data["admin"]) ? "<img src=\"i/bull2.gif\" alt=\"\" width=\"16\" height=\"16\" hspace=\"6\" border=\"0\">" : "";
-			eval('$usersTR.="'.admin::template("usersTR").'";');
+			$this->im=($this->data["admin"]) ? "<img src=\"i/bull2.gif\" alt=\"\" width=\"16\" height=\"16\" hspace=\"6\" border=\"0\">" : "";
+			$this->usersTR.=admin::template("usersTR", $this);
 		}
 		$chid=$this->chid;
-		eval('$users="'.admin::template("usersMain").'";');
+		$users=admin::template("usersMain", $this);
 		$this->elements["content"]=$users;
 	}
 
