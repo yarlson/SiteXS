@@ -2,7 +2,7 @@
 
 <html>
 <head>
-	<title>$page_title</title>
+	<title><?php echo $ref->page_title ?></title>
 	<link href="style.css" rel="stylesheet" type="text/css">
 </head>
 
