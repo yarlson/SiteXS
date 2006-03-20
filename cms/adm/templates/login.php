@@ -13,7 +13,7 @@
 	<td colspan="2" align="center" id="content">
 <?php echo $ref->message ?>
 <form name="FORMPOST" action="" method="post">
-<p><h2><?php echo __("Sigh in") ?></h2></p>
+<p><h2><?php echo __("Sign in") ?></h2></p>
 <table>
 <tr>
 	<td><?php echo __("Login") ?></td>
