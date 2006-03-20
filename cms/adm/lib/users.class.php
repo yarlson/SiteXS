@@ -19,7 +19,7 @@ class users {
 		$chid=$this->chid;
 		$res=$this->db->query("select * from users order by name");
 		while ($this->data=$this->db->fetch_array($res)) {
-			$i++;
+			$this->i++;
 			$this->im=($this->data["admin"]) ? "<img src=\"i/bull2.gif\" alt=\"\" width=\"16\" height=\"16\" hspace=\"6\" border=\"0\">" : "";
 			$this->usersTR.=admin::template("usersTR", $this);
 		}
@@ -29,11 +29,10 @@ class users {
 	}
 
 	function add() {
-		$chid=$this->chid;
-		$action="appendAdd";
-		$header="Добавление";
-		eval("\$content=\"".admin::template("usersAdd", "FORMPOST", array("fields[login]"=>"EXISTS", "fields[pass]"=>"EXISTS", "fields[name]"=>"EXISTS", "confirm"=>"EQUAL fields[pass]", "fields[email]"=>"EMAIL"))."\";");
-		$this->elements["content"]=$content;
+		$this->chid=$this->chid;
+		$this->action="appendAdd";
+		$this->header="Add";
+		$this->elements["content"]=admin::template("usersAdd", $this);
 	}
 
 	function appendAdd () {
@@ -61,17 +60,16 @@ class users {
 		$db=new sql;
 		$db->connect();
 		$res=$db->query("select * from users where id=".$this->id);
-		$data=$db->fetch_array($res);
-		$data["description"]=htmlspecialchars($data["description"]);
+		$this->data=$db->fetch_array($res);
+		$this->data["description"]=htmlspecialchars($this->data["description"]);
 		$chid=$this->chid;
-		$action="appendEdit";
+		$this->action="appendEdit";
 		$id='<tr>
 			<td>№</td>
 			<td><input maxlength="14" name="fields[id]" size="14" value="'.$this->id.'" readonly="readonly" style="width: auto;" value="'.$this->id.'"></td>
 		</tr>';
-		$header="Редактирование";
-		eval("\$content=\"".admin::template("usersEdit", "FORMPOST", array("fields[login]"=>"EXISTS", "fields[name]"=>"EXISTS", "confirm"=>"EQUAL fields[pass]", "fields[email]"=>"EMAIL"))."\";");
-		$this->elements["content"]=$content;
+		$this->header="Edit";
+		$this->elements["content"]=admin::template("usersEdit", $this);
 	}
 
 	function appendEdit () {
