@@ -23,7 +23,7 @@ $message
 			<td><input maxlength="20" name="id" size="20" value="$data[id]" disabled></td>
 		</tr>
 		<tr>
-			<td><?php echo __("date") ?></td>
+			<td><?php echo __("Date") ?></td>
 			<td><select name="date[day]">$select[day]</select>&nbsp;<select name="date[month]">$select[month]</select>&nbsp;<select name="date[year]">$select[year]</select></td>
 		</tr>
 		<tr>

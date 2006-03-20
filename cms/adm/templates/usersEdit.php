@@ -27,7 +27,7 @@ $validator
 </tr>
 
 <tr>
-<td><b><?php echo __("Èìÿ") ?> *</b></td>
+<td><b><?php echo __("Name") ?> *</b></td>
 
 <td><input maxlength="150" name="fields[name]" size="40" tabindex="5" value="<?php echo $this->data["name"] ?>" title="<?php echo __("Name") ?>"></td>
 </tr>

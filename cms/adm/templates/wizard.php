@@ -25,7 +25,7 @@ $content
 	</td>
 </tr>
 <tr>
-	<td style="background: ButtonFace; border-top: 1px solid ButtonHighlight;" align="right"><input type="button" value="&lt; <?php echo __("Назад") ?>" style="width: auto;" onclick="javascript: history.go(-1);">&nbsp;&nbsp;<input type="submit" value="<?php echo __("Далее") ?> &gt;" style="width: auto;"></td>
+	<td style="background: ButtonFace; border-top: 1px solid ButtonHighlight;" align="right"><input type="button" value="&lt; <?php echo __("Back") ?>" style="width: auto;" onclick="javascript: history.go(-1);">&nbsp;&nbsp;<input type="submit" value="<?php echo __("Next") ?> &gt;" style="width: auto;"></td>
 </tr>
 </table>
 </form>
