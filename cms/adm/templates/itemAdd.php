@@ -12,10 +12,10 @@ var wE=new Array();
 </script>
 <script language="JavaScript" src="we/protoedit.js"></script>
 <script language="JavaScript" src="we/wikiedit2.js"></script>
-<?php echo $this->validator ?>
-<h3><?php echo $this->header ?></h3>
+<?php echo $ref->validator ?>
+<h3><?php echo $ref->header ?></h3>
 $message
-<form action="?chid=<?php echo $this->chid ?>&action=<?php echo $this->action ?>&lid=<?php echo $this->lid ?>" method="post" name="FORMPOST"<?php echo $this->onsubmit ?>>
+<form action="?chid=<?php echo $ref->chid ?>&action=<?php echo $ref->action ?>&lid=<?php echo $ref->lid ?>" method="post" name="FORMPOST"<?php echo $ref->onsubmit ?>>
 <input type="hidden" name="fields[article]" value="$data[article]">
 <input type="hidden" name="fields[pid]" value="$data[pid]">
 <p align="center"><input type="button" value="<?php echo __("Cancel") ?>" style="width: auto;" onclick="javascript: history.go(-1);">&nbsp;&nbsp;<input type="submit" value="<?php echo __("Save") ?>" class="save"></p>
@@ -24,13 +24,13 @@ $message
 			<th width="20%"><?php echo __("Field") ?></th>
 			<th width="80%"><?php echo __("Value") ?></th>
 		</tr>
-<?php echo $this->id ?>
+<?php echo $ref->id ?>
 		<tr>
 			<td><?php echo __("Type") ?></td>
 			<td>
 			<select name="fields[type]">
 			<option></option>
-<?php echo $this->types ?>
+<?php echo $ref->types ?>
 			</select>
 		</tr>
 		<tr>

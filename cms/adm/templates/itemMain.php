@@ -6,7 +6,7 @@ var isdrag=false;
 var x,y;
 var dobj;
 var feid, eid;
-var id=<?php echo $this->lid ?>;
+var id=<?php echo $ref->lid ?>;
 
 function movemouse(e) {
 	if (isdrag) {
@@ -57,7 +57,7 @@ function removemouse(e) {
 		var eid = fobj.id.substring(4);
 		
 		if ((eid && feid) && (eid!=feid)) {
-			window.location="./index.php?chid=<?php echo $this->chid ?>&action=reorder&eid=" + eid + "&feid=" + feid + "&id=" + id;
+			window.location="./index.php?chid=<?php echo $ref->chid ?>&action=reorder&eid=" + eid + "&feid=" + feid + "&id=" + id;
 		}		
 		document.body.removeChild(dobj);
 		dobj = null;
@@ -70,12 +70,12 @@ function submit_delete()	{
 	return confirm('<?php echo __("Delete selected record?") ?>');
 }
 </script>
-<p><a href="?chid=<?php echo $this->chid ?>&action=add&pid=0&level=1&lid=<?php echo $this->lid ?>"><img src="i/add.gif" alt="<?php echo __("Add") ?>" width="16" height="16" border="0" hspace="3" align="absmiddle"><?php echo __("Add") ?></a></p>
+<p><a href="?chid=<?php echo $ref->chid ?>&action=add&pid=0&level=1&lid=<?php echo $ref->lid ?>"><img src="i/add.gif" alt="<?php echo __("Add") ?>" width="16" height="16" border="0" hspace="3" align="absmiddle"><?php echo __("Add") ?></a></p>
 <table width="100%">
 <tr>
 	<th width="80%"><?php echo __("Title") ?></th><th width="10%"><?php echo __("Size") ?></th><th width="10%"></th><th><?php echo __("Action") ?></th>
 </tr>
-<?php echo $this->content ?>
+<?php echo $ref->content ?>
 </table>
 
 <br>
