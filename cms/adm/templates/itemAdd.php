@@ -18,7 +18,7 @@ $message
 <form action="?chid=<?php echo $this->chid ?>&action=<?php echo $this->action ?>&lid=<?php echo $this->lid ?>" method="post" name="FORMPOST"<?php echo $this->onsubmit ?>>
 <input type="hidden" name="fields[article]" value="$data[article]">
 <input type="hidden" name="fields[pid]" value="$data[pid]">
-<p align="center"><input type="button" value="<?php echo __("Back") ?>" style="width: auto;" onclick="javascript: history.go(-1);">&nbsp;&nbsp;<input type="submit" value="<?php echo __("Save") ?>" style="width: auto;"></p>
+<p align="center"><input type="button" value="<?php echo __("Cancel") ?>" style="width: auto;" onclick="javascript: history.go(-1);">&nbsp;&nbsp;<input type="submit" value="<?php echo __("Save") ?>" class="save"></p>
 <table border="0" cellspacing="0" cellpadding="5" width="100%">
 		<tr>
 			<th width="20%"><?php echo __("Field") ?></th>
@@ -38,11 +38,11 @@ $message
 			<td><select name="date[day]">$select[day]</select>&nbsp;<select name="date[month]">$select[month]</select>&nbsp;<select name="date[year]">$select[year]</select></td>
 		</tr>
 		<tr>
-			<td><b><?php echo __("Caption") ?>&nbsp;*</b></td>
+			<td><b><?php echo __("Title") ?>&nbsp;*</b></td>
 			<td><input maxlength="255" name="fields[title]" size="40" value="$data[title]" title="<?php echo __("Caption") ?>"></td>
 		</tr>
 		<tr>
-			<td><?php echo __("Subcaption") ?></td>
+			<td><?php echo __("Subtitle") ?></td>
 			<td><textarea cols="40" name="fields[subtitle]" rows="7">$data[subtitle]</textarea></td>
 		</tr>
 		<tr>
@@ -71,8 +71,8 @@ $message
 			<td><textarea cols="40" name="fields[description]" rows="3">$data[description]</textarea></td>
 		</tr>
 	</table>
-<p><b>*&nbsp;&mdash; <?php echo __("Must be filled") ?></b></p>
-<p align="center"><input type="button" value="<?php echo __("Back") ?>" style="width: auto;" onclick="javascript: history.go(-1);">&nbsp;&nbsp;<input type="submit" value="<?php echo __("Save") ?>" style="width: auto;"></p>
+<p><b>*&nbsp;&mdash; <?php echo __("Required fields") ?></b></p>
+<p align="center"><input type="button" value="<?php echo __("Cancel") ?>" style="width: auto;" onclick="javascript: history.go(-1);">&nbsp;&nbsp;<input type="submit" value="<?php echo __("Save") ?>" class="save"></p>
 </form>
 <script type="text/javascript">
 	wE[1] = new WikiEdit(); wE[1].init('text','','CCSclassForTextOnToolbar');

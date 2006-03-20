@@ -48,8 +48,7 @@ class item {
 		$header="Добавление";
 		$lid=$this->lid;
 		$library["chid"]=admin::getTypeID("library");
-		eval("\$content=\"".admin::template("itemAdd", "FORMPOST", array("fields[title]"=>"EXISTS", "fields[url]"=>"EXISTS"))."\";");
-		$this->elements["content"]=$content;
+		$this->elements["content"]=admin::template("itemAdd", $this);
 	}
 
 	function edit () {
