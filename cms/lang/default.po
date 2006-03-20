@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SiteXS\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2006-03-20 07:32+0300\n"
+"PO-Revision-Date: 2006-03-20 21:25+0300\n"
 "Last-Translator: Yar Kravtsov <yarlson@gmail.com>\n"
 "Language-Team: SiteXS Team <yarlson@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -51,16 +51,23 @@ msgstr ""
 msgid "Users"
 msgstr ""
 
-# G:\WebServers\home\sitexs.lan\www/adm/templates/conf.php:13
-# G:\WebServers\home\sitexs.lan\www/adm/templates/itemMain.php:73
-# G:\WebServers\home\sitexs.lan\www/adm/templates/newsMain.php:6
-# G:\WebServers\home\sitexs.lan\www/adm/templates/usersMain.php:6
-# G:\WebServers\home\sitexs.lan\www/adm/templates/usersMain.php:17
-msgid "Add"
+# G:\WebServers\home\sitexs.lan\www/adm/templates/files.php:27
+# G:\WebServers\home\sitexs.lan\www/adm/templates/newsTR.php:5
+# G:\WebServers\home\sitexs.lan\www/adm/templates/usersTR.php:6
+msgid "Delete"
 msgstr ""
 
+# G:\WebServers\home\sitexs.lan\www/adm/templates/newsTR.php:5
+# G:\WebServers\home\sitexs.lan\www/adm/templates/usersTR.php:6
+msgid "Edit"
+msgstr ""
+
+# G:\WebServers\home\sitexs.lan\www/adm/lib/item.class.php:220
 # G:\WebServers\home\sitexs.lan\www/adm/templates/conf.php:13
-msgid "Add new parameter"
+# G:\WebServers\home\sitexs.lan\www/adm/templates/itemMain.php:73
+# G:\WebServers\home\sitexs.lan\www/adm/templates/usersMain.php:6
+# G:\WebServers\home\sitexs.lan\www/adm/templates/usersMain.php:17
+msgid "Add new"
 msgstr ""
 
 # G:\WebServers\home\sitexs.lan\www/adm/templates/conf.php:14
@@ -112,12 +119,6 @@ msgstr ""
 
 # G:\WebServers\home\sitexs.lan\www/adm/templates/files.php:27
 msgid "Rename"
-msgstr ""
-
-# G:\WebServers\home\sitexs.lan\www/adm/templates/files.php:27
-# G:\WebServers\home\sitexs.lan\www/adm/templates/newsTR.php:5
-# G:\WebServers\home\sitexs.lan\www/adm/templates/usersTR.php:6
-msgid "Delete"
 msgstr ""
 
 # G:\WebServers\home\sitexs.lan\www/adm/templates/files.php:27
@@ -192,11 +193,11 @@ msgstr ""
 msgid "Author"
 msgstr ""
 
-# G:\WebServers\home\sitexs.lan\www/adm/templates/itemAdd.php:21
-# G:\WebServers\home\sitexs.lan\www/adm/templates/itemAdd.php:75
-# G:\WebServers\home\sitexs.lan\www/adm/templates/newsAdd.php:15
-# G:\WebServers\home\sitexs.lan\www/adm/templates/newsAdd.php:39
-msgid "Back"
+# G:\WebServers\home\sitexs.lan\www/adm/templates/usersAdd.php:7
+# G:\WebServers\home\sitexs.lan\www/adm/templates/usersAdd.php:60
+# G:\WebServers\home\sitexs.lan\www/adm/templates/usersEdit.php:7
+# G:\WebServers\home\sitexs.lan\www/adm/templates/usersEdit.php:69
+msgid "Cancel"
 msgstr ""
 
 # G:\WebServers\home\sitexs.lan\www/adm/templates/itemAdd.php:24
@@ -211,6 +212,10 @@ msgstr ""
 msgid "Date"
 msgstr ""
 
+# G:\WebServers\home\sitexs.lan\www/adm/templates/itemMain.php:76
+msgid "Title"
+msgstr ""
+
 # G:\WebServers\home\sitexs.lan\www/adm/templates/itemAdd.php:41
 # G:\WebServers\home\sitexs.lan\www/adm/templates/itemAdd.php:42
 # G:\WebServers\home\sitexs.lan\www/adm/templates/newsAdd.php:30
@@ -220,7 +225,7 @@ msgid "Caption"
 msgstr ""
 
 # G:\WebServers\home\sitexs.lan\www/adm/templates/itemAdd.php:45
-msgid "Subcaption"
+msgid "Subtitle"
 msgstr ""
 
 # G:\WebServers\home\sitexs.lan\www/adm/templates/itemAdd.php:49
@@ -253,19 +258,10 @@ msgstr ""
 msgid "META Description"
 msgstr ""
 
-# G:\WebServers\home\sitexs.lan\www/adm/templates/itemAdd.php:74
-# G:\WebServers\home\sitexs.lan\www/adm/templates/newsAdd.php:38
-msgid "Must be filled"
-msgstr ""
-
 # G:\WebServers\home\sitexs.lan\www/adm/templates/itemMain.php:70
 # G:\WebServers\home\sitexs.lan\www/adm/templates/newsMain.php:3
 # G:\WebServers\home\sitexs.lan\www/adm/templates/usersMain.php:3
 msgid "Delete selected record?"
-msgstr ""
-
-# G:\WebServers\home\sitexs.lan\www/adm/templates/itemMain.php:76
-msgid "Title"
 msgstr ""
 
 # G:\WebServers\home\sitexs.lan\www/adm/templates/itemMain.php:76
@@ -304,6 +300,13 @@ msgstr ""
 msgid "Log out"
 msgstr ""
 
+# G:\WebServers\home\sitexs.lan\www/adm/templates/itemAdd.php:21
+# G:\WebServers\home\sitexs.lan\www/adm/templates/itemAdd.php:75
+# G:\WebServers\home\sitexs.lan\www/adm/templates/newsAdd.php:15
+# G:\WebServers\home\sitexs.lan\www/adm/templates/newsAdd.php:39
+msgid "Back"
+msgstr ""
+
 # G:\WebServers\home\sitexs.lan\www/adm/templates/newsAdd.php:22
 # G:\WebServers\home\sitexs.lan\www/adm/templates/newsMain.php:12
 # G:\WebServers\home\sitexs.lan\www/adm/templates/usersMain.php:9
@@ -318,9 +321,17 @@ msgstr ""
 msgid "Visual editor"
 msgstr ""
 
-# G:\WebServers\home\sitexs.lan\www/adm/templates/newsTR.php:5
-# G:\WebServers\home\sitexs.lan\www/adm/templates/usersTR.php:6
-msgid "Edit"
+# G:\WebServers\home\sitexs.lan\www/adm/templates/itemAdd.php:74
+# G:\WebServers\home\sitexs.lan\www/adm/templates/newsAdd.php:38
+msgid "Must be filled"
+msgstr ""
+
+# G:\WebServers\home\sitexs.lan\www/adm/templates/conf.php:13
+# G:\WebServers\home\sitexs.lan\www/adm/templates/itemMain.php:73
+# G:\WebServers\home\sitexs.lan\www/adm/templates/newsMain.php:6
+# G:\WebServers\home\sitexs.lan\www/adm/templates/usersMain.php:6
+# G:\WebServers\home\sitexs.lan\www/adm/templates/usersMain.php:17
+msgid "Add"
 msgstr ""
 
 # G:\WebServers\home\sitexs.lan\www/adm/templates/subscribeAllUsersAdd.php:7
@@ -551,13 +562,6 @@ msgstr ""
 
 # G:\WebServers\home\sitexs.lan\www/adm/templates/subscribeUsersMain.php:27
 msgid "Добавить всех подписчиков в данную рассылку"
-msgstr ""
-
-# G:\WebServers\home\sitexs.lan\www/adm/templates/usersAdd.php:7
-# G:\WebServers\home\sitexs.lan\www/adm/templates/usersAdd.php:60
-# G:\WebServers\home\sitexs.lan\www/adm/templates/usersEdit.php:7
-# G:\WebServers\home\sitexs.lan\www/adm/templates/usersEdit.php:69
-msgid "Cancel"
 msgstr ""
 
 # G:\WebServers\home\sitexs.lan\www/adm/templates/usersAdd.php:29
