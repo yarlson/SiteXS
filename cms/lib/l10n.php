@@ -1,5 +1,5 @@
 <?php
-$input = new FileReader($dr."/languages/russian.mo");
+$input = new FileReader($dr."/lang/default.mo");
 $l10n = new gettext_reader($input);
 
 function __($text) {
