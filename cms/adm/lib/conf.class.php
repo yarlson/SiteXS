@@ -14,12 +14,9 @@ class conf {
 	}
 
 	function defaultAction () {
-		$chid=$this->chid;
 		$res=$this->db->query("select * from config");
-		while ($data=$this->db->fetch_array($res)) eval('$confItem.="'.admin::template("confItem").'";');
-		$chid=$this->chid;
-		eval('$conf="'.admin::template("conf").'";');
-		$this->elements["content"]=$conf;
+		while ($this->data=$this->db->fetch_array($res)) $this->confItem.=admin::template("confItem", $this);
+		$this->elements["content"]=admin::template("conf", $this);
 	}
 
 	function append () {
@@ -30,10 +27,8 @@ class conf {
 	}
 
 	function addParam() {
-		$chid=$this->chid;
 		extract($this->POST);
-		eval('$conf="'.admin::template("confNew", "param", array("name"=>"EXISTS", "descr"=>"EXISTS")).'";');
-		$this->elements["content"]=$conf;
+		$this->elements["content"]=admin::template("confNew", $this);
 	}
 
 	function addParamAppend () {
