@@ -12,10 +12,10 @@ var wE=new Array();
 </script>
 <script language="JavaScript" src="we/protoedit.js"></script>
 <script language="JavaScript" src="we/wikiedit2.js"></script>
-$validator
-<h3>$header</h3>
+<?php echo $this->validator ?>
+<h3><?php echo $this->header ?></h3>
 $message
-<form action="?chid=$chid&action=$action&lid=$lid" method="post" name="FORMPOST"$onsubmit>
+<form action="?chid=<?php echo $this->chid ?>&action=<?php echo $this->action ?>&lid=<?php echo $this->lid ?>" method="post" name="FORMPOST"<?php echo $this->onsubmit ?>>
 <input type="hidden" name="fields[article]" value="$data[article]">
 <input type="hidden" name="fields[pid]" value="$data[pid]">
 <p align="center"><input type="button" value="<?php echo __("Back") ?>" style="width: auto;" onclick="javascript: history.go(-1);">&nbsp;&nbsp;<input type="submit" value="<?php echo __("Save") ?>" style="width: auto;"></p>
@@ -24,13 +24,13 @@ $message
 			<th width="20%"><?php echo __("Field") ?></th>
 			<th width="80%"><?php echo __("Value") ?></th>
 		</tr>
-$id
+<?php echo $this->id ?>
 		<tr>
 			<td><?php echo __("Type") ?></td>
 			<td>
 			<select name="fields[type]">
 			<option></option>
-$types
+<?php echo $this->types ?>
 			</select>
 		</tr>
 		<tr>

@@ -20,11 +20,9 @@ class item {
 
 	function defaultAction () {
 		$open_nodes=$this->_get_open_nodes($this->id);
-		$content=$this->_get_tree(0, $open_nodes);
-		$chid=$this->chid;
-		$lid=($this->id) ? $this->id : 0;
-		eval('$content="'.admin::template("itemMain").'";');
-		$this->elements["content"]=$content;
+		$this->content=$this->_get_tree(0, $open_nodes);
+		$this->lid=($this->id) ? $this->id : 0;
+		$this->elements["content"]=admin::template("itemMain", $this);
 	}
 
 	function showStructure () {
