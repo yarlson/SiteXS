@@ -13,7 +13,7 @@
 <table cellspacing="0" cellpadding="5" width="100%">
 <tr>
 	<td><img src="i/logo.gif" alt="" width="102" height="40" border="0"></td>
-	<td id="login" align="right"><?php echo __("Current user") ?>: <strong><a href="?chid=9&action=edit&id=$this->user_id"><?php echo $ref->user ?></a></strong>&nbsp; &nbsp;<a href="?action=logout" style="font-size: 11px;"><img src="i/logout.gif" alt="" width="16" height="16" hspace="6" border="0" align="absmiddle"><?php echo __("Log out") ?></a></td>
+	<td id="login" align="right"><?php echo __("Current user") ?>: <strong><a href="?chid=9&action=edit&id=<?php echo $this->user_id ?>"><?php echo $ref->user ?></a></strong>&nbsp; &nbsp;<a href="?action=logout" style="font-size: 11px;"><img src="i/logout.gif" alt="" width="16" height="16" hspace="6" border="0" align="absmiddle"><?php echo __("Log out") ?></a></td>
 </tr>
 </table>
 	</td>
