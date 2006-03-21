@@ -174,7 +174,7 @@ img {
 #inside table td {
 padding: 0.5em;
 }
-.save {background: #FF9200; color: white; width: 10em;}
+.save {background: #FF9200; color: white; width: 10em; font-weight: bold}
 .big {font-size: 2em;}
 .big input {font-size: 100%; width: 10em;}
 .signin {background: #FF9200; color: white; font-size: 2em;}
