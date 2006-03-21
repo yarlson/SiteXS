@@ -26,7 +26,7 @@ class admin {
 					header("Location: ./");
 				}
 				else {
-					$this->message="<h3 style=\"color: red;\">Неправильный логин или пароль!!!</h3>";
+					$this->message="<h3 style=\"color: red;\">".__("Wrong login or password!!!")."</h3>";
 					$login=$page->template("login", $this);
 					echo $login;
 					exit;
@@ -199,7 +199,7 @@ class admin {
 		header('Last-Modified: ' . $GLOBALS['now']);
 		header('Cache-Control: no-store, no-cache, must-revalidate, pre-check=0, post-check=0, max-age=0'); // HTTP/1.1
 		header('Pragma: no-cache'); // HTTP/1.0
-		header("Content-Type: text/html; charset=windows-1251");
+		header("Content-Type: text/html; charset=utf-8");
 	}
 
 	function null2nbsp($text) {

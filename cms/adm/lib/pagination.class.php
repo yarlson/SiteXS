@@ -27,7 +27,7 @@ class pagination {
 		$pageCount=ceil((($this->totalRecCount)/$this->recPerPage));
 		if ($pageCount>1)	
 		{
-			$result="<p class=\"pagebar\">Перейти к странице:&nbsp;";
+			$result="<p class=\"pagebar\">".__("Go to page")."&nbsp;";
 			for ($i=0; $i<$pageCount;$i++)
 			{
 				if ($i==($this->page-1)):

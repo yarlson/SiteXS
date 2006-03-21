@@ -30,7 +30,7 @@ class authors {
 		}
 		$chid=$this->chid;
 		$action="appendAdd";
-		$header="Добавление";
+		$header=__("Add new");
 		$data["img"]="<img src=\"i/dot.gif\" alt=\"\" width=\"1\" height=\"1\" border=\"0\" vspace=\"0\" hspace=\"0\" name=\"photo\">";
 		eval("\$content=\"".admin::template("authorsAdd", "FORMPOST", array("fields[lastname]"=>"EXISTS", "fields[url]"=>"EXISTS"))."\";");
 		$this->elements["content"]=$content;
@@ -74,7 +74,7 @@ class authors {
 			<td>№</td>
 			<td><input maxlength="14" name="fields[id]" size="14" value="'.$this->id.'" readonly="readonly" style="width: auto;" value="'.$this->id.'"></td>
 		</tr>';
-		$header="Редактирование";
+		$header=__("Edit");
 		eval("\$content=\"".admin::template("authorsAdd", "FORMPOST", array("fields[lastname]"=>"EXISTS", "fields[url]"=>"EXISTS"))."\";");
 		$this->elements["content"]=$content;
 	}

@@ -38,7 +38,7 @@ class news {
 		$select=admin::getDateSelectOptions();
 		$chid=$this->chid;
 		$action="appendAdd";
-		$header="Добавление";
+		$header=__("Add new");
 		eval("\$content=\"".admin::template("newsAdd", "FORMPOST", array("fields[title]"=>"EXISTS"))."\";");
 		$this->elements["content"]=$content;
 	}
@@ -73,7 +73,7 @@ class news {
 		$select=admin::getDateSelectOptions($data["time"]);
 		$chid=$this->chid;
 		$action="appendEdit";
-		$header="Редактирование";
+		$header=__("Edit");
 		eval("\$content=\"".admin::template("newsAdd", "FORMPOST", array("fields[title]"=>"EXISTS"))."\";");
 		$this->elements["content"]=$content;
 	}

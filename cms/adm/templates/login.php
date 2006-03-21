@@ -13,8 +13,7 @@
 	<td colspan="2" align="center" id="content">
 <?php echo $ref->message ?>
 <form name="FORMPOST" action="" method="post">
-<p><h2><?php echo __("Sign in") ?></h2></p>
-<table>
+<table class="big">
 <tr>
 	<td><?php echo __("Login") ?></td>
 	<td><input type="text" name="user"></td>
@@ -24,7 +23,7 @@
 	<td><input type="password" name="pass" value=""></td>
 </tr>
 </table>
-<p align="center"><input type="submit" value="<?php echo __("Sign in") ?>"></p>
+<p align="center"><input type="submit" value="<?php echo __("Sign in") ?>" class="signin"></p>
 </form>
 	</td>
 </tr>

@@ -78,7 +78,7 @@ class item {
 		//$res2=$db->query("select id, name, short_text, time from library where id='".$data["article"]."'");
 		
 		$state_selected[$data["state"]]=" selected";
-		$header="Редактирование";
+		$header=__("Edit");
 		$lid=$this->lid;
 		eval("\$content=\"".admin::template("itemAdd", "FORMPOST", array("fields[title]"=>"EXISTS", "fields[url]"=>"EXISTS"))."\";");
 		$this->elements["content"]=$content;
@@ -100,7 +100,7 @@ class item {
 		$res=$db->query("select id from chapters where url='".$this->fields["url"]."' and pid='".$this->fields["pid"]."'");
 		if ($db->num_rows($res)) {
 			$_SESSION["fields"]=$this->fields;
-			$_SESSION["wrongFields"][]="Страница с таким адресом (URL)&nbsp;&mdash; <b>".$this->fields["url"]."</b>&nbsp;&mdash; уже существует!";
+			$_SESSION["wrongFields"][]="The page with such URI <b>".$this->fields["url"]."</b> exists!";
 			header("Location: ?chid=".$this->chid."&action=wrongAdd&id=".$this->lid);
 			exit;
 		}
@@ -207,7 +207,7 @@ class item {
 		if ($db->num_rows($res)>0) {
 			$s.="\n";
 			while ($data=$db->fetch_array($res)) {
-				$bl=($data["bl"]) ? number_format($data["bl"]/1024, 2, ',', ' ')."&nbsp;КБ" : "";
+				$bl=($data["bl"]) ? number_format($data["bl"]/1024, 2, ',', ' ')."&nbsp;".__("KB") : "";
 				$gc=$this->_got_child($data["id"]);
 				$img=($gc) ? (($open_nodes[$data["id"]]) ? "minus" : "plus") : "dot";
 				$l=($data["type"]) ? "_" : "";
@@ -217,7 +217,7 @@ class item {
 				$a_c=($gc) ?  "</a>" :"";
 				$lid=$this->id;
 				$del=($gc || $data["id"]=="1") ? "&nbsp;<img src=\"i/dot.gif\" alt=\"\" width=\"16\" height=\"16\" border=\"0\">" : "&nbsp;<a href=\"?chid=".$this->chid."&action=delete&id=".$data["id"]."&lid=$lid\" class=\"buttons\"><img src=\"i/del.gif\" title=\"".__("Delete")."\" width=\"16\" height=\"16\" border=\"0\" onClick=\"return submit_delete(".$data["id"].")\"></a>";
-				$s.= "<tr><td><img src=\"i/dot.gif\" alt=\"\" width=\"".(($level-1)*20)."\" height=\"1\" border=\"0\">$a_o<img src=\"i/".$img.".gif\" alt=\"\" border=\"0\" align=\"absmiddle\" height=\"16\" width=\"16\"><img id=\"icon".$data["id"]."\" src=\"i/$img1.gif\" alt=\"\" border=\"0\" align=\"absmiddle\" height=\"16\" width=\"16\" hspace=\"5\" class=\"dragme\">".$data["title"]."$a_c</span></td><td style=\"color: gray;\" align=\"right\">$bl</td><td align=\"center\"><img src=\"i/".(($data["state"] ? "dot" : "hidden")).".gif\" alt=\"".(($data["state"] ? "" : "скрыто"))."\" width=\"32\" height=\"16\" border=\"0\"></td><td style=\"white-space: nowrap;\">&nbsp;&nbsp;<a href=\"?chid=".$this->chid."&action=edit&id=".$data["id"]."&lid=$lid\" class=\"buttons\"><img src=\"i/edit.gif\" title=\"".__("Edit")."\" width=\"16\" height=\"16\" border=\"0\"></a>$del&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href=\"?chid=".$this->chid."&action=add&pid=".$data["id"]."&level=".($level+1)."&lid=$lid\" class=\"buttons\"><img src=\"i/add.gif\" title=\"".__("Add new")."\" width=\"16\" height=\"16\" border=\"0\"></a>&nbsp;&nbsp;</td></tr>\n";
+				$s.= "<tr><td><img src=\"i/dot.gif\" alt=\"\" width=\"".(($level-1)*20)."\" height=\"1\" border=\"0\">$a_o<img src=\"i/".$img.".gif\" alt=\"\" border=\"0\" align=\"absmiddle\" height=\"16\" width=\"16\"><img id=\"icon".$data["id"]."\" src=\"i/$img1.gif\" alt=\"\" border=\"0\" align=\"absmiddle\" height=\"16\" width=\"16\" hspace=\"5\" class=\"dragme\">".$data["title"]."$a_c</span></td><td style=\"color: gray;\" align=\"right\">$bl</td><td align=\"center\"><img src=\"i/".(($data["state"] ? "dot" : "hidden")).".gif\" alt=\"".(($data["state"] ? "" : __("hidden")))."\" width=\"32\" height=\"16\" border=\"0\"></td><td style=\"white-space: nowrap;\">&nbsp;&nbsp;<a href=\"?chid=".$this->chid."&action=edit&id=".$data["id"]."&lid=$lid\" class=\"buttons\"><img src=\"i/edit.gif\" title=\"".__("Edit")."\" width=\"16\" height=\"16\" border=\"0\"></a>$del&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href=\"?chid=".$this->chid."&action=add&pid=".$data["id"]."&level=".($level+1)."&lid=$lid\" class=\"buttons\"><img src=\"i/add.gif\" title=\"".__("Add new")."\" width=\"16\" height=\"16\" border=\"0\"></a>&nbsp;&nbsp;</td></tr>\n";
 				if ($open_nodes[$data["id"]]) $s.=$this->_get_tree($data["id"], $open_nodes, $level, &$counter);
 			}
 			$s.="\n";

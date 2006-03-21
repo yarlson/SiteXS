@@ -12,7 +12,7 @@ class images extends files {
 		if ($im[2])
 			parent::upload();
 		else {
-			$_SESSION["warning"]="Файл <b>".$_FILES["pic"]["name"]."</b> не является графическим!";
+			$_SESSION["warning"]=__("The file <b>").$_FILES["pic"]["name"].__("</b> is not an image!");
 			header("Location: ?chid=$this->chid&dir=$this->dir&w=1");
 		}
 	}

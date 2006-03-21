@@ -53,7 +53,7 @@ class library {
 		$action="appendAdd";
 		$idSel=0;
 		eval("\$authorsSel=\"".admin::template("authorsJSscr")."\";");
-		$header="Добавление";
+		$header=__("Add new");
 		eval("\$content=\"".admin::template("libraryAdd", "FORMPOST", array("fields[name]"=>"EXISTS"))."\";");
 		$this->elements["content"]=$content;
 	}
@@ -116,7 +116,7 @@ class library {
 		}
 		$curSel=0;
 		eval("\$authorsSel.=\"".admin::template("authorsJSscr")."\";");
-		$header="Редактирование";
+		$header=__("Edit");
 		$page="&page=".$this->page;
 		eval("\$content=\"".admin::template("libraryAdd", "FORMPOST", array("fields[name]"=>"EXISTS"))."\";");
 		$this->elements["content"]=$content;
@@ -155,7 +155,7 @@ class library {
 		$db=new sql;
 		$db->connect();
 		include "lib/orderby.class.php";
-		$orderBy=new orderBy("?chid=".$this->chid."&", array("library"=>"№", "time"=>"Дата", "name"=>"Заголовок", "short_text"=>"Подзаголовок", "author"=>"Автор"), array("library"=>"desc"),$this->field, $this->order);
+		$orderBy=new orderBy("?chid=".$this->chid."&", array("library"=>__("#"), "time"=>__("Date"), "name"=>__("Title"), "short_text"=>__("Subtitle"), "author"=>__("Author")), array("library"=>"desc"),$this->field, $this->order);
 		$ths=$orderBy->ths();
 		
 		if ($this->id) {
@@ -193,7 +193,7 @@ class library {
 		$db->connect();
 		
 		include "lib/orderby.class.php";
-		$orderBy=new orderBy("?chid=".$this->chid."&", array("library"=>"№", "time"=>"Дата", "name"=>"Заголовок", "short_text"=>"Подзаголовок", "author"=>"Автор"), array("library"=>"desc"),$this->field, $this->order);
+		$orderBy=new orderBy("?chid=".$this->chid."&", array("library"=>__("#"), "time"=>__("Date"), "name"=>__("Title"), "short_text"=>__("Subtitle"), "author"=>__("Author")), array("library"=>"desc"),$this->field, $this->order);
 		
 		$adminConfig=admin::adminConfig();
 		//echo "select library.id as library, name, short_text, time, authors.lastname as author FROM (library LEFT JOIN library_authors ON library.id = library_authors.library) LEFT JOIN authors ON library_authors.author = authors.id GROUP BY library.id".$orderBy->orderByQuery()." limit ".(($this->page-1)*$adminConfig["recPerPage"]).", ".$adminConfig["recPerPage"];

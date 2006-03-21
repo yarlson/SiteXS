@@ -70,7 +70,7 @@ function submit_delete()	{
 	return confirm('<?php echo __("Delete selected record?") ?>');
 }
 </script>
-<p><a href="?chid=<?php echo $ref->chid ?>&action=add&pid=0&level=1&lid=<?php echo $ref->lid ?>"><img src="i/add.gif" alt="<?php echo __("Add new") ?>" width="16" height="16" border="0" hspace="3" align="absmiddle"><?php echo __("Add new") ?></a></p>
+<p><a href="?chid=<?php echo $ref->chid ?>&action=add&pid=0&level=1&lid=<?php echo $ref->lid ?>" class="addnew"><img src="i/add.gif" alt="<?php echo __("Add new") ?>" width="16" height="16" border="0" hspace="3" align="absmiddle"><?php echo __("Add new") ?></a></p>
 <table width="100%">
 <tr>
 	<th width="80%"><?php echo __("Title") ?></th><th width="10%"><?php echo __("Size") ?></th><th width="10%"></th><th><?php echo __("Action") ?></th>
