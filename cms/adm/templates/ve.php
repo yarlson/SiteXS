@@ -2,7 +2,7 @@
 
 <html>
 <head>
-	<title>HTML VisualEd</title>
+	<title><?php echo __("Visual Editor")." ".__("powered by")." tinyMCE"  ?></title>
 <script language="javascript" type="text/javascript" src="/adm/tinymce/jscripts/tiny_mce/tiny_mce_gzip.php"></script>
 <script language="javascript" type="text/javascript">
 
@@ -29,7 +29,7 @@
 		file_browser_callback : "mcFileManager.filebrowserCallBack",
 		paste_auto_cleanup_on_paste : true,
 		paste_convert_headers_to_strong : true,
-		language : "ru"
+		language : "<?php echo __("en") ?>"
 	});
 	//alert(opener.document.FORMPOST.elements["<?php echo $ref ?>"].value);
 function mysave() {
