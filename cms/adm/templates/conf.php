@@ -6,9 +6,7 @@ function showVE(id, field) {
 var wE=new Array();
 var i;
 </script>
-<link rel="stylesheet" href="we/wikiedit.css" type="text/css">
-<script language="JavaScript" src="we/protoedit.js"></script>
-<script language="JavaScript" src="we/wikiedit2.js"></script>
+
 <form action="?chid=<?php echo $this->chid ?>&action=append" method="post" name="FORMPOST">
 <p><a href="?chid=<?php echo $this->chid ?>&action=addParam" class="addnew"><img src="i/add.gif" alt="<?php echo __("Add new") ?>" width="16" height="16" border="0" hspace="3" align="absmiddle"><?php echo __("Add new") ?></a></p>
 <p align="center"><input type="submit" value="<?php echo __("Save") ?>" class="save"></p>
