@@ -1,5 +1,5 @@
 <?php
-$DB["host"]="localhost:3306";
+$DB["host"]="localhost";
 $DB["dbName"]="sitexs";
 $DB["user"]="sitexs";
 $DB["pass"]="";
