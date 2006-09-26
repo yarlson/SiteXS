@@ -76,7 +76,7 @@ class page {
 			$url=$this->url["path"];
 			$url=preg_replace("'^\/".addslashes($url_before)."'", "", $url);
 			
-			$module=new $data["name"]($url, $this->url["query"], $this->dirs["id"][count($this->dirs["type"])-1], $this->els->properties);
+			$module=new $data["name"]($this->dirs);
 			$modulesMethods = get_class_methods(get_class($module));
 			
 			for ($i=1; $i<count($modulesMethods); $i++) {
