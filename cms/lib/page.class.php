@@ -57,9 +57,9 @@ class page {
 		$elementsMethods = get_class_methods(get_class($this->els));
 		for ($i=1; $i<count($elementsMethods); $i++) {
 			$methodName=$elementsMethods[$i];
-			if (substr($methodName, 0, 1)!="_") $this->els->$methodName();
+			if (substr($methodName, 0, 1)!="_") $this->elements[$methodName]=$this->els->$methodName();
 		}
-		
+		//print_r($this->elements);
 		$moduleId=$this->dirs["type"][count($this->dirs["type"])-1];
 		if ($moduleId) {
 			
@@ -81,7 +81,7 @@ class page {
 			
 			for ($i=1; $i<count($modulesMethods); $i++) {
 				$methodName=$modulesMethods[$i];
-				if (substr($methodName, 0, 1)!="_") $module->$methodName();
+				if (substr($methodName, 0, 1)!="_") $moduleElements[$methodName]=$module->$methodName();
 			}
 			
 			if (method_exists($module, "_error404")) {
@@ -91,14 +91,12 @@ class page {
 				}
 			}
 			
-			foreach ($this->els->elements as $key => $value) {
-				if ($key=="contentTitle" && $module->elements[$key])
-					$this->els->elements[$key]=$module->elements[$key];
-				else
-					$this->els->elements[$key].=$module->elements[$key];
+			foreach ($this->elements as $key => $value) {
+				$this->elements[$key]=$moduleElements[$key];
 			}
+			
 		}
-        $this->elements=$this->els->elements;
+        
 	}
 
 	function getConfig() {

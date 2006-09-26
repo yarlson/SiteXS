@@ -6,8 +6,7 @@ class sitemap extends elements {
 	}
 
 	function content() {
-		parent::content();
-		$this->elements["content"]=$this->_sel();
+		return parent::content().$this->_sel();
 	}
 
 	function _sel($id=0, $url="", $menu=0) {

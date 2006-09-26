@@ -19,8 +19,8 @@ class elements {
 				$url.=$this->dirs["url"][$i]."/";
 				$breadCrumbs.="&nbsp;&rarr;&nbsp;<a href=\"/".$url."\">".$this->dirs["title"][$i]."</a>";
 			}
-			if (!($this->dirs["root"] && count($this->dirs["url"])!=count($this->dirs["id"]))) $this->elements["breadCrumbs"].="&nbsp;&rarr; ".$this->dirs["title"][$this->dirs["count"]-1];
-			$breadCrumbs="<a href=\"/\">".__("Home")."</a>".$this->elements["breadCrumbs"];
+			if (!($this->dirs["root"] && count($this->dirs["url"])!=count($this->dirs["id"]))) $breadCrumbs.="&nbsp;&rarr; ".$this->dirs["title"][$this->dirs["count"]-1];
+			$breadCrumbs="<a href=\"/\">".__("Home")."</a>".$breadCrumbs;
 			return $breadCrumbs;
 		}
 	}
