@@ -1,10 +1,12 @@
 <?php
-class sitemap {
+class sitemap extends elements {
 
-	function sitemap() {
+	function sitemap($dirs) {
+		$this->elements($dirs);
 	}
 
 	function content() {
+		parent::content();
 		$this->elements["content"]=$this->_sel();
 	}
 

@@ -11,6 +11,9 @@ include_once $dr."/lib/db.conf.php";
 include_once $dr."/lib/mysql.class.php";
 include_once $dr."/lib/page.class.php";
 
+$db=new sql;
+$db->connect();
+
 $page=new page;
 
 $page->parseURI();$page->findPath();$page->sendHeader();$page->getElements();$page->getConfig();

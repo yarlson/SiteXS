@@ -2,74 +2,65 @@
 class page {
 
 	function page() {
-		$this->mt=$this->getmicrotime();
-		if (preg_match("'^http:'", getenv("REQUEST_URI"))) {
-			$this->uri=getenv("REQUEST_URI");
-		}
-		else {
-			$this->uri="http://".getenv("SERVER_NAME").getenv("REQUEST_URI");
-		}
+
 		$this->documentRoot=$this->getDocumentRoot();
-		$this->db=new sql;
-		$mt=$this->mt;
-		$this->mt=$this->getmicrotime();
-		$this->mta[]= "<!-- init".($this->mt-$mt)." -->";
+		
+		$this->db=& $GLOBALS['db'];
 	}
 
 	function parseURI () {
-		$this->url=parse_url($this->uri);
-		if ($this->url["path"]!="/") $this->dirs["url"]=explode("/", preg_replace("'^\/|\/$'", "", $this->url["path"]));
-		else $this->dirs["url"][]="index";
-		if ($this->url["query"]) parse_str($this->url["query"], $this->get);
-		$mt=$this->mt;
-		$this->mt=$this->getmicrotime();
-		$this->mta[]=  "<!-- parse".($this->mt-$mt)." -->";
+		
+		$this->url=parse_url($_GET["url"]);
+
+		if ($this->url["path"]!="/" and $this->url["path"]!="") {
+			$this->dirs["url"]=explode("/", preg_replace("'^\/|\/$'", "", $this->url["path"]));
+		}
+		else {
+			$this->dirs["url"][]="index";
+		}
+		
+		if ($this->url["query"]) {
+			parse_str($this->url["query"], $this->get);
+		}
 	}
 
 	function findPath() {
-		$this->db->connect();
+	
 		$pid=0;
-		for ($i=0; $i<count($this->dirs["url"]); $i++) {
+		
+		for ($i=0; $i<count($this->dirs["url"]) && !($data["type"] && $data["root"]); $i++) {
+		
 			$res=$this->db->query("select chapters.id as cid, pid, chapters.title as ctitle, type, url, root from chapters left join types on (chapters.type=types.id) where url='".$this->dirs["url"][$i]."' and pid='".$pid."'");
 			$data=$this->db->fetch_array($res);
+			
 			$this->dirs["id"][]=$data["cid"];
 			$this->dirs["pid"][]=$data["pid"];
 			$this->dirs["title"][]=$data["ctitle"];
 			$this->dirs["type"][]=$data["type"];
 			$this->dirs["root"]=$data["root"];
+			
 			$pid=$data["cid"];
-			if ($data["cid"]) $this->dirs["count"]=count($this->dirs["id"]);
-			if (($data["type"] && $data["root"])) break;
+			
+			if ($data["cid"]) {
+				$this->dirs["count"]=count($this->dirs["id"]);
+			}
 		}
+		
 		$this->id=$data["cid"];
-		$mt=$this->mt;
-		$this->mt=$this->getmicrotime();
-		$this->mta[]=  "<!-- find".($this->mt-$mt)." -->";
 	}
 
 	function getElements() {
 		
-		$mt=$this->mt;
-		$this->mt=$this->getmicrotime();
-		$this->mta[]=  "<!-- elements f ".($this->mt-$mt)." -->";
 		include_once ($this->documentRoot."/lib/elements.class.php");
+		
 		$this->els=new elements($this->dirs);
-		$mt=$this->mt;
-		$this->mt=$this->getmicrotime();
-		$this->mta[]=  "<!-- elements bm1 ".($this->mt-$mt)." -->";
 		$elementsMethods = get_class_methods(get_class($this->els));
-		$mt=$this->mt;
-		$this->mt=$this->getmicrotime();
-		$this->mta[]=  "<!-- elements bm2 ".($this->mt-$mt)." -->";
 		for ($i=1; $i<count($elementsMethods); $i++) {
 			$methodName=$elementsMethods[$i];
 			if (substr($methodName, 0, 1)!="_") $this->els->$methodName();
 		}
 		
 		$moduleId=$this->dirs["type"][count($this->dirs["type"])-1];
-		$mt=$this->mt;
-		$this->mt=$this->getmicrotime();
-		$this->mta[]=  "<!-- elements bm ".($this->mt-$mt)." -->";
 		if ($moduleId) {
 			
 			$this->db->connect();
@@ -108,14 +99,10 @@ class page {
 			}
 		}
         $this->elements=$this->els->elements;
-		$mt=$this->mt;
-		$this->mt=$this->getmicrotime();
-		$this->mta[]=  "<!-- elements".($this->mt-$mt)." -->";
 	}
 
 	function getConfig() {
-		$db=new sql;
-		$db->connect();
+		$db=& $GLOBALS['db'];;
 		$res=$db->query("select * from config");
 		while ($data=$db->fetch_array($res)) {
 			$this->config[$data["name"]]=$data["text"];
@@ -124,18 +111,13 @@ class page {
 	}
 
 	function sendHeader() {
-		if ((!file_exists($this->documentRoot."/".$this->uri) && (count($this->dirs["url"])==$this->dirs["count"])) || $this->dirs["root"]) {
-			if (!preg_match("'/$'", $this->uri) && !$this->get && !$this->url["fragment"]) {
-				header("Location: ".$this->uri."/");
-			}
-			else {
-				header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
-				header("Content-Type: text/html; charset=".$this->config["charset"]);
-				header("HTTP/1.0 200 OK", true);
-			}
+		if (count($this->dirs["url"])==$this->dirs["count"] || $this->dirs["root"]) {
+			header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
+			header("Content-Type: text/html; charset=".$this->config["charset"]);
+			header("HTTP/1.0 200 OK", true);
 		}
 		else {
-			//header("HTTP/1.0 404 OK", false);
+			header("HTTP/1.0 404 OK", false);
 			readfile($this->documentRoot."/404.html");
 			exit;	
 		}

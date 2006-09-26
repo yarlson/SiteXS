@@ -4,8 +4,8 @@ class elements {
 	function elements ($dirs) {
 		$this->dirs=$dirs;
 		
-		$this->db=new sql;
-		$this->db->connect();
+		$this->db=& $GLOBALS['db'];
+
 		$res=$this->db->query("select * from chapters where id='".$this->dirs["id"][$this->dirs["count"]-1]."'");
 		$this->properties=$this->db->fetch_array($res);
 		
@@ -13,25 +13,24 @@ class elements {
 
 	function breadCrumbs () {
 		if ($this->properties["id"]!=1) {
-			$this->elements["breadCrumbs"]="";
+			$breadCrumbs="";
 			$count=($this->dirs["root"] && count($this->dirs["url"])!=count($this->dirs["id"])) ? $this->dirs["count"] : $this->dirs["count"]-1;
 			for ($i=0; $i<$count; $i++) {
 				$url.=$this->dirs["url"][$i]."/";
-				$this->elements["breadCrumbs"].="&nbsp;&rarr;&nbsp;<a href=\"/".$url."\">".$this->dirs["title"][$i]."</a>";
+				$breadCrumbs.="&nbsp;&rarr;&nbsp;<a href=\"/".$url."\">".$this->dirs["title"][$i]."</a>";
 			}
 			if (!($this->dirs["root"] && count($this->dirs["url"])!=count($this->dirs["id"]))) $this->elements["breadCrumbs"].="&nbsp;&rarr; ".$this->dirs["title"][$this->dirs["count"]-1];
-			$this->elements["breadCrumbs"]="<a href=\"/\">".__("Home")."</a>".$this->elements["breadCrumbs"];
+			$breadCrumbs="<a href=\"/\">".__("Home")."</a>".$this->elements["breadCrumbs"];
+			return $breadCrumbs;
 		}
 	}
 
 	function content () {
-		$this->elements["content"]=$this->properties["text"];
+		return $this->properties["text"];
 	}
 
 	function menus () {
-		$mt=$this->mt;
-		$this->mt=$this->getmicrotime();
-		$this->mta[]=  "<!-- b menu".($this->mt-$mt)." -->";
+
 		$res=$this->db->query("select * from menus order by id");
 		while ($menus=$this->db->fetch_array($res)) {
 			$res1=$this->db->query("select title, url, id from chapters where pid=0 and menu=".$menus["id"]." order by sortorder");
@@ -57,58 +56,60 @@ class elements {
 				
 			}
 			eval('$menu.="'.page::escapeText($menus["main_tpl"]).'";');
-			$this->elements["menu".$menus["id"]]=$menu;
+			$menus[$menus["id"]]=$menu;
 			unset($menu);unset($i);unset($menuNodes);
 		}
-		$mt=$this->mt;
-		$this->mt=$this->getmicrotime();
-		$this->mta[]=  "<!-- amenu".($this->mt-$mt)." -->";
+		return $menus;
+
 	}
 
 	function leftBar() {
-		$this->elements["leftBar"]="";
+		return "";
 	}
 
 	function rightBar() {
-		$this->elements["rightBar"]="";
+		return "";
 	}
 
 	function contentTitle() {
-		if ($this->properties["id"]>1) $this->elements["contentTitle"]="<h1>".$this->properties["title"]."</h1>";
+		if ($this->properties["id"]>1) $contentTitle="<h1>".$this->properties["title"]."</h1>";
+		return $contentTitle;
 	}
 
 	function title() {
-		$this->elements["title"]=$this->properties["title"];
+		return $this->properties["title"];
 	}
 
 	function contentSubTitle() {
-		if ($this->properties["subtitle"]) $this->elements["contentSubTitle"]="<h1>".$this->properties["subtitle"]."</h1>";
+		if ($this->properties["subtitle"]) $contentSubTitle="<h1>".$this->properties["subtitle"]."</h1>";
+		$contentSubTitle;
 	}
 
 	function authors() {
-		$this->elements["authors"]="";
+		return "";
 	}
 
 	function style () {
 		if (file_exists(page::getDocumentRoot()."/images/bottom/w".$this->properties["id"].".gif")) {
-			$this->elements["style1"]="background: url(/images/bottom/w".$this->properties["id"].".gif) bottom right no-repeat;";
-			$this->elements["style2"]=" url(/images/bottom/w".$this->properties["id"].".gif) bottom right no-repeat";
+			$style[1]="background: url(/images/bottom/w".$this->properties["id"].".gif) bottom right no-repeat;";
+			$style[2]=" url(/images/bottom/w".$this->properties["id"].".gif) bottom right no-repeat";
 		}
 		if (file_exists(page::getDocumentRoot()."/images/bottom/w".$this->properties["id"]."_.gif")) {
-			$this->elements["style3"]=" style=\"background: url(/images/bottom/w".$this->properties["id"]."_.gif) bottom right no-repeat;\"";
+			$style[3]=" style=\"background: url(/images/bottom/w".$this->properties["id"]."_.gif) bottom right no-repeat;\"";
 		}
+		return $style;
 	}
 
 	function time() {
-		$this->elements["time"]="";
+		return "";
 	}
 
 	function keywords() {
-		$this->elements["keywords"]=$this->properties["keywords"];
+		return $this->properties["keywords"];
 	}
 
 	function description() {
-		$this->elements["description"]=$this->properties["description"];
+		return $this->properties["description"];
 	}
 
 	function getmicrotime(){ 
