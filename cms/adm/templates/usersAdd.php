@@ -8,9 +8,9 @@ textarea, input {font-family: tahoma;width: 100%;font-size: 100%;}
 <table border="0" width="100%" cellspacing="0" cellpadding="5">
 
 <tr>
-<th style="width: 30%;"><?php echo __("Field") ?></th>
+<th style="wite-space: nowrap;"><?php echo __("Field") ?></th>
 
-<th style="width: 70%;"><?php echo __("Value") ?></th>
+<th style="width: 100%;"><?php echo __("Value") ?></th>
 </tr>
 
 <tr>
