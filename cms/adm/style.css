@@ -1,10 +1,10 @@
 body {
-	font-size: 80%;
+	font-size: 82%;
 	background-color: #FBFBFB;
-	margin: 0; padding: 0;
+	margin: 0; padding: 1em;
 	font-family: tahoma;
 }
-table {
+table, p, div {
 	font-size: 100%;;
 }
 a, a:visited {
@@ -16,49 +16,65 @@ a:hover {
 img {
 	border: none;
 }
+#header {
+}
+#header div {
+	float: right;
+}
 #login {
 	font-size: 90%;
 	line-height: 20px;
 	float: right;
 }
-#head {
-	float: right;
-}
-#head h1 {
-	margin: 0px;
-	padding: 0px;
+#container {
+	height: auto; background: #EFEFE4;
+	margin-top: 1em;
 }
 #menu {
-	border-bottom: 1px solid silver;
-	margin-bottom: 10px;
-	margin-top: 6px;
-	height: 28px;
+	float: left;
+	width: 100%;
+	border-bottom: 0.5em solid #EFEFE4;
+	clear: both;
+	background: #FBFBFB;
+	font-size: 1.6em;
+}
+#menu ul,#menu ul li{
+	list-style-type: none;
+	margin: 0;
+	padding: 0
 }
 #menu ul {
-		border-left: 1px solid silver;
-		margin: 0px;
-		padding: 0px;
-		width: 100%;
 }
-#menu li {
-		border-right: 1px solid silver;
-		border-top: 1px solid silver;
-		padding: 5px;
-		background-color: #f0f0f0;
-		display: inline;
-		float: left;
-		list-style-type: none;
+#menu ul li {
+	float: left;
+	margin-right: 3px;
+	text-align: center;
+	border-top: 1px solid #EFEFE4;
+	border-left: 1px solid #EFEFE4;
+	border-right: 1px solid #EFEFE4;
+	background: #F8F8F3;
 }
-#menu li#current {
-	border-right: 1px solid silver;
-	border-top: 1px solid #FF9200;
-	padding: 5px;
-	background-color: #ffffff;
-	font-weight: bold;
+#menu ul a{
+	float: left;
+	width: 7em;
+	padding: 5px 0;
+	background: #F8F8F3;
+	text-decoration: none;
 }
+#menu ul span {
+	float: left;
+	width: 7em;padding: 5px 0;
+	background: #EFEFE4;
+}
+
+#menu ul li#current, #menu ul li#current a {
+	background: #EFEFE4;
+}
+
 #submenu {
-	border-top: 3px solid #FF9200;
 	background-color: #EFEFE4;
+	width: 15em;
+	float: left;
 }
 #submenu ul {
 	margin: 0;
@@ -74,15 +90,13 @@ img {
 	font-weight: bold;
 }
 #content {
-	width: 84%;
+	margin-left: 15em;
+	padding: 0 1em 1em 1em;
+	background: #FBFBFB;
 }
 #content h2 {
-	background-color: #EFEFE4;
 	color: Black;
-	padding: 5px 10px 5px 10px;
-	display: inline;
-	line-break : strict;
-	font-size : 160%;
+	font-size : 1.6em;
 	margin-top: 0px;
 	font-weight: normal;
 }
@@ -98,6 +112,7 @@ img {
 	border-collapse: collapse;
 	border-spacing: 0px;
 	background-color : #F8F8F3;
+	width: auto;
 }
 #content td {
 	border: 1px solid silver;
@@ -152,13 +167,13 @@ img {
 	background : #F8F8F3;
 	padding: 3px;
 }
-#nav {
+ {
 	margin-left: 1em;
 }
-#nav td {
+ td {
 	border-bottom-width: 0px;
 }
-#nav #cur {
+ #cur {
 	border-top: 1px solid #FF9200;
 	background-color: #ffffff;
 	font-weight: bold;

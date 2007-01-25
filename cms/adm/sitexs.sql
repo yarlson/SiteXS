@@ -180,5 +180,4 @@ CREATE TABLE `users` (
 ) ;
 
 
-INSERT INTO `users` (`id`, `login`, `pass`, `name`, `email`, `description`, `admin`) VALUES (1, 'yarlson', '2b9c19c2b6740bbcdebd1a044e543b5c', 'Yar Kravtsov', 'kravtsovyar@mail.ru', '', 1);
-INSERT INTO `users` (`id`, `login`, `pass`, `name`, `email`, `description`, `admin`) VALUES (2, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'admin', NULL, NULL, 1);
+INSERT INTO `users` (`id`, `login`, `pass`, `name`, `email`, `description`, `admin`) VALUES (1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'admin', NULL, NULL, 1);

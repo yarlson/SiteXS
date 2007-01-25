@@ -1,2 +1,2 @@
-<tr><td valign="top" width="30%"><?php echo $ref->data["descr"] ?></td><td width="70%"><textarea name="<?php echo $ref->data["name"] ?>" cols="50" rows="5" style="width: 100%;" id="<?php echo $ref->data["name"] ?>"><?php echo $ref->data["text"] ?></textarea><a href="#" onClick="return showVE('0', '<?php echo $ref->data["name"] ?>');"><?php echo __("Visual Editor") ?></a>
+<tr><td valign="top" style="white-space: nowrap;"><?php echo $ref->data["descr"] ?></td><td width="100%"><textarea name="<?php echo $ref->data["name"] ?>" cols="50" rows="5" style="width: 100%;" id="<?php echo $ref->data["name"] ?>"><?php echo $ref->data["text"] ?></textarea><a href="#" onClick="return showVE('0', '<?php echo $ref->data["name"] ?>');"><?php echo __("Visual Editor") ?></a>
 </td></tr>
