@@ -1,7 +1,6 @@
 body {
 	font-size: 82%;
-	background-color: #FBFBFB;
-	margin: 0; padding: 1em;
+	margin: 0;
 	font-family: tahoma;
 }
 table, p, div {
@@ -17,6 +16,8 @@ img {
 	border: none;
 }
 #header {
+	background: #F8F8F3;
+	padding: 2em;
 }
 #header div {
 	float: right;
@@ -27,72 +28,85 @@ img {
 	float: right;
 }
 #container {
-	height: auto; background: #EFEFE4;
-	margin-top: 1em;
+	min-height: 20em;
+	_height: 20em;
+	height: auto;
+	background: url(i/bg.gif) repeat-x top left;
 }
 #menu {
-	float: left;
-	width: 100%;
-	border-bottom: 0.5em solid #EFEFE4;
-	clear: both;
-	background: #FBFBFB;
+	background: #EFEFE4;
 	font-size: 1.6em;
+	height: 2em;
+	margin: 0 20px;
 }
 #menu ul,#menu ul li{
 	list-style-type: none;
 	margin: 0;
-	padding: 0
+	padding: 0;
+	background: #EFEFE4;
 }
 #menu ul {
+
 }
 #menu ul li {
 	float: left;
-	margin-right: 3px;
-	text-align: center;
-	border-top: 1px solid #EFEFE4;
-	border-left: 1px solid #EFEFE4;
-	border-right: 1px solid #EFEFE4;
-	background: #F8F8F3;
+	text-align: left;
+	margin-right: 0.5em;
 }
 #menu ul a{
 	float: left;
-	width: 7em;
 	padding: 5px 0;
-	background: #F8F8F3;
 	text-decoration: none;
 }
 #menu ul span {
 	float: left;
-	width: 7em;padding: 5px 0;
-	background: #EFEFE4;
+	padding: 5px 0;
 }
 
 #menu ul li#current, #menu ul li#current a {
-	background: #EFEFE4;
+	font-weight: bold;
 }
 
 #submenu {
-	background-color: #EFEFE4;
-	width: 15em;
-	float: left;
+	background: #E6E6DA;
+	font-size: 1em;
+	height: 2em;
+	clear: both;
+	margin: 0 20px;
+}
+#submenu ul,#submenu ul li{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
 }
 #submenu ul {
-	margin: 0;
-	padding: 0 0.5em 0 0;
-	list-style-type : none;
+	background:#D1D4C0;
 }
-#submenu li {
-	margin-top: 0.5em;
-	margin-bottom: 0.5em;
-	white-space: nowrap;
+#submenu ul li {
+	float: left;
+	text-align: left;
+	margin-right: 0.5em;
 }
-#submenu li#current {
+#submenu ul a{
+	float: left;
+	padding: 5px 0;
+	text-decoration: none;
+}
+#submenu ul span {
+	float: left;
+	padding: 5px 0;
+}
+
+#submenu ul li#current, #submenu ul li#current a {
 	font-weight: bold;
 }
 #content {
-	margin-left: 15em;
-	padding: 0 1em 1em 1em;
-	background: #FBFBFB;
+	background: #FFF;
+	min-height: 300px;
+	_height: 300px;
+	height: auto;
+	margin: 1em 20px;
+	padding: 1em;
 }
 #content h2 {
 	color: Black;
@@ -112,17 +126,22 @@ img {
 	border-collapse: collapse;
 	border-spacing: 0px;
 	background-color : #F8F8F3;
-	width: auto;
+	width: 100%;
+	_width: auto;
 }
 #content td {
 	border: 1px solid silver;
 	padding: 5px;
+}
+#content td.nw, #content th.nw{
+	white-space: nowrap;
 }
 #content th {
 	border: 1px solid silver;
 	padding: 5px;
 	background-color: #EFEFE4;
 }
+
 #content table.noborder {
 	border-collapse: collapse;
 	border-spacing: 0px;

@@ -11,7 +11,7 @@ $nav[5]=array(0, __("Modules"), "modules", "modules.gif");
 $nav[6]=array(5, __("News"), "news", "news.gif");
 $nav[7]=array(5, __("Subsription"), "subscribe", "subscribe.gif");
 
-$nav[8]=array(0, __("Params"), "conf", "options.gif", 1);
+$nav[8]=array(0, __("Config"), "conf", "options.gif", 1);
 
 $nav[9]=array(0, __("Users"), "users", "users.gif", 1);
 
