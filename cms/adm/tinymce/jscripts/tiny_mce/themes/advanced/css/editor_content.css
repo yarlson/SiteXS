@@ -3,17 +3,15 @@
 
 body, td, pre {
 	font-family: Verdana, Arial, Helvetica, sans-serif;
-	font-size: 0.83em;
+	font-size: 10px;
 }
 
 body {
 	background-color: #FFFFFF;
-	padding: 0.5em;
 }
 
 .mceVisualAid {
 	border: 1px dashed #BBBBBB !important;
-	padding: 0;
 }
 
 div.mceVisualAid {

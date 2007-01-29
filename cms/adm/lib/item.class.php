@@ -30,22 +30,22 @@ class item {
 	}
 
 	function add () {
-		$select=admin::getDateSelectOptions();
-		$chid=$this->chid;
-		$action="appendAdd";
+		$this->select=admin::getDateSelectOptions();
+		$this->chid=$this->chid;
+		$this->action="appendAdd";
 		
 		$db=new sql;
 		$db->connect();
 		$res=$db->query("select * from types order by id");
 		while($data=$db->fetch_array($res)) {
 			$i++;
-			$types.="<option value=\"$data[id]\">$data[title]</option>";
+			$this->types.="<option value=\"$data[id]\">$data[title]</option>";
 		}
 		
 		$ts[$this->level]=" selected";
 		$true=($this->level==4) ? " && true" : " && false";
 		$data["pid"]=$this->pid;
-		$header="Добавление";
+		$this->header=__("Add new");
 		$lid=$this->lid;
 		$library["chid"]=admin::getTypeID("library");
 		$this->elements["content"]=admin::template("itemAdd", $this);

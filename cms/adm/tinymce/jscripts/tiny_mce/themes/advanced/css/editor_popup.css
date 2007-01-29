@@ -1,17 +1,9 @@
 /* This file contains the CSS data for all popups in TinyMCE */
 
 body {
-	background-color: #F0F0EE;
+	background-color: #F8F8F3;
 	font-family: Verdana, Arial, Helvetica, sans-serif;
 	font-size: 11px;
-	scrollbar-3dlight-color: #F0F0EE;
-	scrollbar-arrow-color: #676662;
-	scrollbar-base-color: #F0F0EE;
-	scrollbar-darkshadow-color: #DDDDDD;
-	scrollbar-face-color: #E0E0DD;
-	scrollbar-highlight-color: #F0F0EE;
-	scrollbar-shadow-color: #F0F0EE;
-	scrollbar-track-color: #F5F5F5;
 	margin: 8px;
 }
 
@@ -21,8 +13,7 @@ td {
 }
 
 input {
-	background: #FFFFFF;
-	border: 1px solid #cccccc;
+
 }
 
 td, input, select, textarea {
@@ -31,7 +22,7 @@ td, input, select, textarea {
 }
 
 input, select, textarea {
-	border: 1px solid #808080;
+
 }
 
 .input_noborder {
@@ -39,21 +30,11 @@ input, select, textarea {
 }
 
 #insert, .updateButton {
-   font-weight: bold;
-   width: 90px;
-   height: 21px;
-   border: 0;
-   background-image: url('../images/insert_button_bg.gif');
-   cursor: pointer;
+background: #FF9200; color: white; width: 10em; font-weight: bold;
 }
 
 #cancel {
-   font-weight: bold;
-   width: 90px;
-   height: 21px;
-   border: 0;
-   background-image: url('../images/cancel_button_bg.gif');
-   cursor: pointer;
+
 }
 
 /* Mozilla only style */
@@ -311,6 +292,10 @@ h3 {
 #image .panel_wrapper, #image div.current {
 	height: 190px;
 }
+
+label.msg { display: none; }
+label.invalid { color: #EE0000; display: inline; }
+input.invalid { border: 1px solid #EE0000; }
 
 /* Disables the advanced tab in the table plugin. */
 /*

@@ -37,7 +37,7 @@
 }
 
 .mceToolbar {
-	background: #EFEFE4;
+	background: #F0F0EE;
 	border-top: 1px solid #cccccc;
 	line-height: 1px;
 	font-size: 1px;
@@ -67,7 +67,7 @@ a.mceButtonNormal img, a.mceButtonSelected img {
 }
 
 a.mceButtonSelected img {
-	border: 1px solid Silver !important;
+	border: 1px solid #C0C0BB !important;
 }
 
 a.mceButtonNormal img:hover, a.mceButtonSelected img:hover {
