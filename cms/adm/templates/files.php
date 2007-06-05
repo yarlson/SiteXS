@@ -1,15 +1,3 @@
-<style type="text/css">
-		tr.default  {
-			background-color: #F8F8F3;
-		}
-		tr.selected td {
-			background-color: #EFEFE4;
-		}
-		#buttonBar {text-align: center; padding-top: 1em;}
-		#buttonBar ul {border: 1px solid silver;font-size: 85%; font-family: tahoma; height: 2em; float: left; margin: 0; padding: 1em;}
-		#buttonBar img {margin-right: 0.5em;}
-		#buttonBar li {float: left; list-style-type: none;margin: 0 1em;; padding: 0;}
-</style>
 <script language="JavaScript" type="text/javascript" src="check.js"></script>
 <script language="JavaScript" type="text/javascript" src="oWnd.js"></script>
 <script type="text/javascript" language="JavaScript">
