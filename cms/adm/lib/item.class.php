@@ -44,7 +44,7 @@ class item {
 		
 		$ts[$this->level]=" selected";
 		$true=($this->level==4) ? " && true" : " && false";
-		$data["pid"]=$this->pid;
+		$this->data["pid"]=$this->pid;
 		$this->header=__("Add new");
 		$lid=$this->lid;
 		$library["chid"]=admin::getTypeID("library");
@@ -55,32 +55,32 @@ class item {
 		$db=new sql;
 		$db->connect();
 		$res=$db->query("select * from chapters where id=".$this->id);
-		$data=$db->fetch_array($res);
-		$data["text"]=htmlspecialchars($data["text"]);
-		$true=($data["type"]==4) ? " && true" : " && false";
+		$this->data=$db->fetch_array($res);
+		$this->data["text"]=htmlspecialchars($this->data["text"]);
+		$true=($this->data["type"]==4) ? " && true" : " && false";
 		
 		$db=new sql;
 		$db->connect();
 		$res1=$db->query("select * from types order by id");
 		while($data1=$db->fetch_array($res1)) {
 			$i++;
-			$types.="<option".(($data["type"]==$data1[id]) ? " selected" : "")." value=\"$data1[id]\">$data1[title]</option>";
+			$types.="<option".(($this->data["type"]==$data1[id]) ? " selected" : "")." value=\"$data1[id]\">$data1[title]</option>";
 		}
 		
-		$select=admin::getDateSelectOptions($data["time"]);
+		$this->select=admin::getDateSelectOptions($this->data["time"]);
 		$chid=$this->chid;
-		$action="appendEdit";
-		$id='<tr>
+		$this->action="appendEdit";
+		$this->id='<tr>
 			<td>¹</td>
 			<td><input maxlength="14" name="fields[id]" size="14" value="'.$this->id.'" readonly="readonly" style="width: auto;" value="'.$this->id.'"></td>
 		</tr>';
 		
 		//$res2=$db->query("select id, name, short_text, time from library where id='".$data["article"]."'");
 		
-		$state_selected[$data["state"]]=" selected";
-		$header=__("Edit");
+		$this->state_selected[$this->data["state"]]=" selected";
+		$this->header=__("Edit");
 		$lid=$this->lid;
-		eval("\$content=\"".admin::template("itemAdd", "FORMPOST", array("fields[title]"=>"EXISTS", "fields[url]"=>"EXISTS"))."\";");
+		$content=admin::template("itemAdd", $this);
 		$this->elements["content"]=$content;
 	}
 

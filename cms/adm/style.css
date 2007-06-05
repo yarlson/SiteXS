@@ -17,7 +17,7 @@ img {
 }
 #header {
 	background: #F8F8F3;
-	padding: 2em;
+	padding: 1em 2em;
 }
 #header div {
 	float: right;
@@ -213,3 +213,4 @@ padding: 0.5em;
 .signin {background: #FF9200; color: white; font-size: 2em;}
 .addnew {font-size: 1.5em;}
 
+.clear {clear: both;}

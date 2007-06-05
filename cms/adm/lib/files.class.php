@@ -20,21 +20,23 @@ class files {
 	function defaultAction () {
 		$dirs=explode("/", $this->dir);
 		
-		if ($this->dir) $localBreadCrumbs="<a href=\"?chid=".$this->chid."\">".$this->root."</a>";
-		else $localBreadCrumbs=$this->root;
+		if ($this->dir) $this->localBreadCrumbs="<a href=\"?chid=".$this->chid."\">".$this->root."</a>";
+		else $this->localBreadCrumbs=$this->root;
 		
 		for ($i=1; $i<sizeof($dirs);$i++) {
 			$path.="/".$dirs[$i];
 			if ($i==sizeof($dirs)-1)
-				$localBreadCrumbs.="/<b>".$dirs[$i]."</b>";
+				$this->localBreadCrumbs.="/<b>".$dirs[$i]."</b>";
 			else
-				$localBreadCrumbs.="/<a href=\"?chid=".$this->chid."&dir=".$path."\">".$dirs[$i]."</a>";
+				$this->localBreadCrumbs.="/<a href=\"?chid=".$this->chid."&dir=".$path."\">".$dirs[$i]."</a>";
 		}
 		
 		if ($handle = opendir($this->global_dir)) {
 			while (false !== ($file = readdir($handle))) { 
-				if (is_dir($this->global_dir."/$file")) $file="/".$file;
-				$fa[]=$file;
+				if ($file!="index.html" && $file!="CVS") {
+					if (is_dir($this->global_dir."/$file")) $file="/".$file;
+					$fa[]=$file;
+				}
 			}
 			natcasesort($fa);
 			clearstatcache();
@@ -62,9 +64,9 @@ class files {
 					}
 				}
 			}
-			$files_tr=$folder_tr.$files_tr;
+			$this->files_tr=$folder_tr.$files_tr;
 			closedir($handle);
-			eval('$content="'.admin::template("files").'";');
+			$content.=admin::template("files", $this);
 		}
 		$this->elements["content"]=$content;
 	}
@@ -97,7 +99,7 @@ class files {
 		if (is_uploaded_file($_FILES["pic"]["tmp_name"])) {
 			$pic_name=$_FILES["pic"]["name"];
 			copy($_FILES["pic"]["tmp_name"],"$this->global_dir/$pic_name");
-			chmod("$this->global_dir/$pic_name", 0777);
+			chmod("$this->global_dir/$pic_name", 0666);
 		}
 		header("Location: ?chid=$this->chid&dir=$this->dir");
 	}

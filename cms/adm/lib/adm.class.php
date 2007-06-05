@@ -27,7 +27,7 @@ class admin {
 				}
 				else {
 					$this->message="<h3 style=\"color: red;\">".__("Wrong login or password!!!")."</h3>";
-					$login=$page->template("login", $this);
+					$login=$this->template("login", $this);
 					echo $login;
 					exit;
 				}
