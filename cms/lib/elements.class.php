@@ -35,7 +35,6 @@ class elements {
 		while ($menus=$this->db->fetch_array($res)) {
 			$res1=$this->db->query("select title, url, id from chapters where pid=0 and menu=".$menus["id"]." order by sortorder");
 			while($data=$this->db->fetch_array($res1)) {
-				
 				$i++;
 				
 				if ($data[id]==1)
@@ -53,13 +52,12 @@ class elements {
 					$tpl="";
 				}
 				eval('$menuNodes.="'.page::escapeText($menus[$tpl."node_tpl"]).'";');
-				
 			}
 			eval('$menu.="'.page::escapeText($menus["main_tpl"]).'";');
-			$menus[$menus["id"]]=$menu;
+			$menu_res[$menus["id"]]=$menu;
 			unset($menu);unset($i);unset($menuNodes);
 		}
-		return $menus;
+		return $menu_res;
 
 	}
 

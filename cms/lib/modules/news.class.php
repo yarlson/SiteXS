@@ -1,13 +1,10 @@
 <?php
 class news {
 
-	function news ($url, $query, $id) {
+	function news ($dirs) {
 		$this->db=new sql;
-		$this->url=$url;
+		$this->dirs=$dirs;
 		$this->ruMonths=array("1"=>"€нварь", "февраль", "март", "апрель", "май", "июнь", "июль", "август", "сент€брь", "окт€брь", "но€брь", "декабрь");
-		if ($this->url) {
-			$this->dirs=explode("/", preg_replace("'^\/|\/$'", "", $url));
-		}
 	}
 
 	function leftBar() {
@@ -71,10 +68,6 @@ class news {
 
 	function contentTitle() {
 		if ($this->dirs[0]) $this->elements["contentTitle"]="<h2>".$this->properties["year"].(($this->properties["month"]) ? " ".$this->properties["ruMonth"] : "")."</h2>";
-	}
-
-	function _error404() {
-		return ((count($this->properties)<1 && $this->url) || count($this->dirs)>2) ? true : false;
 	}
 
 }

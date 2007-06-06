@@ -64,7 +64,7 @@ class item {
 		$res1=$db->query("select * from types order by id");
 		while($data1=$db->fetch_array($res1)) {
 			$i++;
-			$types.="<option".(($this->data["type"]==$data1[id]) ? " selected" : "")." value=\"$data1[id]\">$data1[title]</option>";
+			$this->types.="<option".(($this->data["type"]==$data1[id]) ? " selected" : "")." value=\"$data1[id]\">$data1[title]</option>";
 		}
 		
 		$this->select=admin::getDateSelectOptions($this->data["time"]);

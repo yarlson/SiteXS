@@ -92,11 +92,11 @@ class page {
 			}
 			
 			foreach ($this->elements as $key => $value) {
-				$this->elements[$key]=$moduleElements[$key];
+				if ($moduleElements[$key]) $this->elements[$key]=$moduleElements[$key];
 			}
 			
 		}
-        
+
 	}
 
 	function getConfig() {
