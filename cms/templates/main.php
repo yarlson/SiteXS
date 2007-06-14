@@ -7,6 +7,8 @@
 <title><?php echo $ref->config["site_name"] ?></title>
 
 <meta name="generator" content="SiteXS" />
+<meta name="keywords" content="<?php echo $ref->elements["keywords"] ?>" />
+<meta name="description" content="<?php echo $ref->elements["description"] ?>" />
 
 <link rel="stylesheet" href="/templates/test-style.css" type="text/css" media="screen" />
 

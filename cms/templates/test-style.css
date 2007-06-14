@@ -23,13 +23,13 @@ Author URI: http://binarybonsai.com/
 body {
 	font-size: 62.5%; /* Resets 1em to 10px */
 	font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif;
-	background: #d5d6d7 url('/i/kubrickbgcolor.png');
+	background: #fafaec url('/i/kubrickbgcolor.png');
 	color: #333;
 	text-align: center;
 	}
 
 #page {
-	background: #fafaec url("/i/kubrickbg.png") repeat-y top;
+	background: #fafaec url("/i/kubrickbg-ltr.png") repeat-y top;
 	border: none;
 	text-align: left;
 	}
@@ -214,7 +214,7 @@ body {
 	}
 
 #page {
-	margin: 20px auto;
+	margin: 0 auto;
 	padding: 0;
 	width: 760px;
 	}
@@ -308,11 +308,6 @@ h1 {
 h2 {
 	margin: 30px 0 0;
 	}
-
-h2.pagetitle {
-	margin-top: 30px;
-	text-align: center;
-}
 
 #sidebar h2 {
 	margin: 5px 0 0;
@@ -618,7 +613,11 @@ a img {
 	}
 /* End Various Tags & Classes*/
 
-
+#breadcrumbs {
+	padding: 0.5em 22px 0 22px;
+	background: #fafaec;
+	min-height: 1.5em;
+}
 
 /* "Daisy, Daisy, give me your answer do. I'm half crazy all for the love of you.
 	It won't be a stylish marriage, I can't afford a carriage.

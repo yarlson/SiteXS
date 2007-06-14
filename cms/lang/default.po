@@ -2,21 +2,152 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SiteXS\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2006-03-21 07:14+0300\n"
+"PO-Revision-Date: 2007-06-14 17:52+0300\n"
 "Last-Translator: Yar Kravtsov <yarlson@gmail.com>\n"
 "Language-Team: SiteXS <yarlson@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-Language: English\n"
 "X-Poedit-Country: RUSSIAN FEDERATION\n"
-"X-Poedit-SourceCharset: iso-8859-1\n"
+"X-Poedit-SourceCharset: utf-8\n"
 "X-Poedit-KeywordsList: __\n"
 "X-Poedit-Basepath: .\n"
-"X-Poedit-SearchPath-0: G:\\WebServers\\home\\sitexs.lan\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-SearchPath-0: /home/ykravtsov/workspace/cms\n"
 
-# G:\WebServers\home\sitexs.lan/www/adm/lib/adm.class.php:29
-msgid "Wrong login or password!!!"
+#: /home/ykravtsov/workspace/cms/install.php:13
+msgid "Oops!"
+msgstr ""
+
+# G:\WebServers\home\sitexs.lan/www/adm/templates/newsAdd.php:15
+# G:\WebServers\home\sitexs.lan/www/adm/templates/newsAdd.php:39
+#: /home/ykravtsov/workspace/cms/install.php:13
+#: /home/ykravtsov/workspace/cms/adm/templates/wizard.php:28
+#: /home/ykravtsov/workspace/cms/adm/templates/newsAdd.php:15
+#: /home/ykravtsov/workspace/cms/adm/templates/newsAdd.php:39
+msgid "Back"
+msgstr ""
+
+#: /home/ykravtsov/workspace/cms/install.php:21
+msgid "installation"
+msgstr ""
+
+#: /home/ykravtsov/workspace/cms/install.php:60
+msgid "Welcome to SiteXS installation!"
+msgstr ""
+
+#: /home/ykravtsov/workspace/cms/install.php:62
+msgid "Proceed to the first step"
+msgstr ""
+
+#: /home/ykravtsov/workspace/cms/install.php:71
+msgid "DB host:port"
+msgstr ""
+
+#: /home/ykravtsov/workspace/cms/install.php:74
+msgid "DB name"
+msgstr ""
+
+#: /home/ykravtsov/workspace/cms/install.php:77
+msgid "DB user"
+msgstr ""
+
+#: /home/ykravtsov/workspace/cms/install.php:80
+msgid "DB password"
+msgstr ""
+
+#: /home/ykravtsov/workspace/cms/install.php:83
+msgid "Proceed to the next step"
+msgstr ""
+
+#: /home/ykravtsov/workspace/cms/install.php:115
+msgid "Congratulations"
+msgstr ""
+
+#: /home/ykravtsov/workspace/cms/install.php:116
+msgid "Done"
+msgstr ""
+
+#: /home/ykravtsov/workspace/cms/install.php:117
+msgid "Use"
+msgstr ""
+
+#: /home/ykravtsov/workspace/cms/install.php:117
+msgid "login"
+msgstr ""
+
+#: /home/ykravtsov/workspace/cms/install.php:117
+msgid "and password"
+msgstr ""
+
+# G:\WebServers\home\sitexs.lan/www/adm/templates/login.php:5
+# G:\WebServers\home\sitexs.lan/www/adm/templates/login.php:16
+# G:\WebServers\home\sitexs.lan/www/adm/templates/login.php:27
+#: /home/ykravtsov/workspace/cms/install.php:119
+#: /home/ykravtsov/workspace/cms/adm/templates/login.php:5
+#: /home/ykravtsov/workspace/cms/adm/templates/login.php:26
+msgid "Sign in"
+msgstr ""
+
+#: /home/ykravtsov/workspace/cms/install.php:124
+msgid "Cannot write to lib/db.conf.php!"
+msgstr ""
+
+#: /home/ykravtsov/workspace/cms/install.php:128
+msgid "Cannot select or create db!"
+msgstr ""
+
+#: /home/ykravtsov/workspace/cms/install.php:132
+msgid "Cannot connect to MySQL server!"
+msgstr ""
+
+# G:\WebServers\home\sitexs.lan/www/lib/elements.class.php:23
+#: /home/ykravtsov/workspace/cms/lib/elements.class.php:23
+msgid "Home"
+msgstr ""
+
+# G:\WebServers\home\sitexs.lan/www/adm/lib/config.inc.php:3
+#: /home/ykravtsov/workspace/cms/adm/lib/config.inc.php:3
+msgid "Content"
+msgstr ""
+
+# G:\WebServers\home\sitexs.lan/www/adm/lib/config.inc.php:5
+#: /home/ykravtsov/workspace/cms/adm/lib/config.inc.php:5
+msgid "Structure"
+msgstr ""
+
+# G:\WebServers\home\sitexs.lan/www/adm/lib/config.inc.php:6
+#: /home/ykravtsov/workspace/cms/adm/lib/config.inc.php:6
+msgid "Images"
+msgstr ""
+
+# G:\WebServers\home\sitexs.lan/www/adm/lib/config.inc.php:7
+#: /home/ykravtsov/workspace/cms/adm/lib/config.inc.php:7
+msgid "Files"
+msgstr ""
+
+# G:\WebServers\home\sitexs.lan/www/adm/lib/config.inc.php:9
+#: /home/ykravtsov/workspace/cms/adm/lib/config.inc.php:9
+msgid "Modules"
+msgstr ""
+
+# G:\WebServers\home\sitexs.lan/www/adm/lib/config.inc.php:11
+#: /home/ykravtsov/workspace/cms/adm/lib/config.inc.php:11
+msgid "News"
+msgstr ""
+
+# G:\WebServers\home\sitexs.lan/www/adm/lib/config.inc.php:12
+#: /home/ykravtsov/workspace/cms/adm/lib/config.inc.php:12
+msgid "Subsription"
+msgstr ""
+
+#: /home/ykravtsov/workspace/cms/adm/lib/config.inc.php:14
+msgid "Config"
+msgstr ""
+
+# G:\WebServers\home\sitexs.lan/www/adm/lib/config.inc.php:16
+#: /home/ykravtsov/workspace/cms/adm/lib/config.inc.php:16
+msgid "Users"
 msgstr ""
 
 # G:\WebServers\home\sitexs.lan/www/adm/lib/item.class.php:220
@@ -28,6 +159,18 @@ msgstr ""
 # G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeUsersMain.php:27
 # G:\WebServers\home\sitexs.lan/www/adm/templates/usersMain.php:6
 # G:\WebServers\home\sitexs.lan/www/adm/templates/usersMain.php:17
+#: /home/ykravtsov/workspace/cms/adm/lib/item.class.php:48
+#: /home/ykravtsov/workspace/cms/adm/lib/item.class.php:220
+#: /home/ykravtsov/workspace/cms/adm/lib/library.class.php:56
+#: /home/ykravtsov/workspace/cms/adm/lib/authors.class.php:33
+#: /home/ykravtsov/workspace/cms/adm/lib/news.class.php:41
+#: /home/ykravtsov/workspace/cms/adm/templates/itemMain.php:73
+#: /home/ykravtsov/workspace/cms/adm/templates/usersMain.php:6
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeMessagesMain.php:16
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeMain.php:16
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeAllUsersMain.php:16
+#: /home/ykravtsov/workspace/cms/adm/templates/conf.php:11
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeUsersMain.php:27
 msgid "Add new"
 msgstr ""
 
@@ -37,65 +180,24 @@ msgstr ""
 # G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeMessagesTR.php:5
 # G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeTR.php:5
 # G:\WebServers\home\sitexs.lan/www/adm/templates/usersTR.php:6
+#: /home/ykravtsov/workspace/cms/adm/lib/item.class.php:81
+#: /home/ykravtsov/workspace/cms/adm/lib/item.class.php:220
+#: /home/ykravtsov/workspace/cms/adm/lib/library.class.php:119
+#: /home/ykravtsov/workspace/cms/adm/lib/authors.class.php:77
+#: /home/ykravtsov/workspace/cms/adm/lib/news.class.php:76
+#: /home/ykravtsov/workspace/cms/adm/templates/newsTR.php:5
+#: /home/ykravtsov/workspace/cms/adm/templates/usersTR.php:6
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeTR.php:5
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeMessagesTR.php:5
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeAllUsersTR.php:5
 msgid "Edit"
-msgstr ""
-
-# G:\WebServers\home\sitexs.lan/www/adm/lib/config.inc.php:3
-msgid "Content"
-msgstr ""
-
-# G:\WebServers\home\sitexs.lan/www/adm/lib/config.inc.php:5
-msgid "Structure"
-msgstr ""
-
-# G:\WebServers\home\sitexs.lan/www/adm/lib/config.inc.php:6
-msgid "Images"
-msgstr ""
-
-# G:\WebServers\home\sitexs.lan/www/adm/lib/config.inc.php:7
-msgid "Files"
-msgstr ""
-
-# G:\WebServers\home\sitexs.lan/www/adm/lib/config.inc.php:9
-msgid "Modules"
-msgstr ""
-
-# G:\WebServers\home\sitexs.lan/www/adm/lib/config.inc.php:11
-msgid "News"
-msgstr ""
-
-# G:\WebServers\home\sitexs.lan/www/adm/lib/config.inc.php:12
-msgid "Subsription"
-msgstr ""
-
-# G:\WebServers\home\sitexs.lan/www/adm/lib/config.inc.php:14
-msgid "Params"
-msgstr ""
-
-# G:\WebServers\home\sitexs.lan/www/adm/lib/config.inc.php:16
-msgid "Users"
-msgstr ""
-
-# G:\WebServers\home\sitexs.lan/www/adm/lib/files.class.php:52
-# G:\WebServers\home\sitexs.lan/www/adm/lib/files.class.php:57
-msgid "Folder"
 msgstr ""
 
 # G:\WebServers\home\sitexs.lan/www/adm/lib/files.class.php:61
 # G:\WebServers\home\sitexs.lan/www/adm/lib/item.class.php:210
+#: /home/ykravtsov/workspace/cms/adm/lib/item.class.php:210
+#: /home/ykravtsov/workspace/cms/adm/lib/files.class.php:63
 msgid "KB"
-msgstr ""
-
-# G:\WebServers\home\sitexs.lan/www/adm/lib/files.class.php:108
-msgid "File"
-msgstr ""
-
-# G:\WebServers\home\sitexs.lan/www/adm/lib/images.class.php:15
-msgid "The file <b>"
-msgstr ""
-
-# G:\WebServers\home\sitexs.lan/www/adm/lib/images.class.php:15
-msgid "</b> is not an image!"
 msgstr ""
 
 # G:\WebServers\home\sitexs.lan/www/adm/lib/item.class.php:219
@@ -105,11 +207,30 @@ msgstr ""
 # G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeMessagesTR.php:5
 # G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeTR.php:5
 # G:\WebServers\home\sitexs.lan/www/adm/templates/usersTR.php:6
+#: /home/ykravtsov/workspace/cms/adm/lib/item.class.php:219
+#: /home/ykravtsov/workspace/cms/adm/templates/newsTR.php:5
+#: /home/ykravtsov/workspace/cms/adm/templates/usersTR.php:6
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeTR.php:5
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeMessagesTR.php:5
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeAllUsersTR.php:5
+#: /home/ykravtsov/workspace/cms/adm/templates/files.php:27
+#: /home/ykravtsov/workspace/cms/adm/templates/files.php:60
 msgid "Delete"
 msgstr ""
 
 # G:\WebServers\home\sitexs.lan/www/adm/lib/item.class.php:220
+#: /home/ykravtsov/workspace/cms/adm/lib/item.class.php:220
 msgid "hidden"
+msgstr ""
+
+# G:\WebServers\home\sitexs.lan/www/adm/lib/adm.class.php:29
+#: /home/ykravtsov/workspace/cms/adm/lib/adm.class.php:29
+msgid "Wrong login or password!!!"
+msgstr ""
+
+# G:\WebServers\home\sitexs.lan/www/adm/lib/pagination.class.php:30
+#: /home/ykravtsov/workspace/cms/adm/lib/pagination.class.php:30
+msgid "Go to page"
 msgstr ""
 
 # G:\WebServers\home\sitexs.lan/www/adm/templates/newsAdd.php:22
@@ -122,29 +243,104 @@ msgstr ""
 # G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeMessagesMain.php:22
 # G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeUsersMain.php:21
 # G:\WebServers\home\sitexs.lan/www/adm/templates/usersMain.php:9
+#: /home/ykravtsov/workspace/cms/adm/lib/library.class.php:158
+#: /home/ykravtsov/workspace/cms/adm/lib/library.class.php:196
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeInfoEdit.php:30
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeInfo.php:22
+#: /home/ykravtsov/workspace/cms/adm/templates/usersMain.php:9
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeMessageAdd.php:32
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeMessagesMain.php:22
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeMain.php:22
+#: /home/ykravtsov/workspace/cms/adm/templates/newsMain.php:12
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeUsersMain.php:21
+#: /home/ykravtsov/workspace/cms/adm/templates/newsAdd.php:22
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeAllUsersAdd.php:20
 msgid "#"
 msgstr ""
 
 # G:\WebServers\home\sitexs.lan/www/adm/templates/itemAdd.php:37
 # G:\WebServers\home\sitexs.lan/www/adm/templates/newsMain.php:13
+#: /home/ykravtsov/workspace/cms/adm/lib/library.class.php:158
+#: /home/ykravtsov/workspace/cms/adm/lib/library.class.php:196
+#: /home/ykravtsov/workspace/cms/adm/templates/newsMain.php:13
+#: /home/ykravtsov/workspace/cms/adm/templates/newsAdd.php:26
+#: /home/ykravtsov/workspace/cms/adm/templates/itemAdd.php:59
 msgid "Date"
 msgstr ""
 
 # G:\WebServers\home\sitexs.lan/www/adm/templates/itemAdd.php:41
 # G:\WebServers\home\sitexs.lan/www/adm/templates/itemMain.php:76
+#: /home/ykravtsov/workspace/cms/adm/lib/library.class.php:158
+#: /home/ykravtsov/workspace/cms/adm/lib/library.class.php:196
+#: /home/ykravtsov/workspace/cms/adm/templates/itemMain.php:76
+#: /home/ykravtsov/workspace/cms/adm/templates/itemAdd.php:63
 msgid "Title"
 msgstr ""
 
 # G:\WebServers\home\sitexs.lan/www/adm/templates/itemAdd.php:45
+#: /home/ykravtsov/workspace/cms/adm/lib/library.class.php:158
+#: /home/ykravtsov/workspace/cms/adm/lib/library.class.php:196
+#: /home/ykravtsov/workspace/cms/adm/templates/itemAdd.php:67
 msgid "Subtitle"
 msgstr ""
 
 # G:\WebServers\home\sitexs.lan/www/adm/templates/info.php:11
+#: /home/ykravtsov/workspace/cms/adm/lib/library.class.php:158
+#: /home/ykravtsov/workspace/cms/adm/lib/library.class.php:196
+#: /home/ykravtsov/workspace/cms/adm/templates/info.php:11
 msgid "Author"
 msgstr ""
 
-# G:\WebServers\home\sitexs.lan/www/adm/lib/pagination.class.php:30
-msgid "Go to page"
+# G:\WebServers\home\sitexs.lan/www/adm/lib/files.class.php:52
+# G:\WebServers\home\sitexs.lan/www/adm/lib/files.class.php:57
+#: /home/ykravtsov/workspace/cms/adm/lib/files.class.php:54
+#: /home/ykravtsov/workspace/cms/adm/lib/files.class.php:59
+msgid "Folder"
+msgstr ""
+
+# G:\WebServers\home\sitexs.lan/www/adm/lib/files.class.php:108
+#: /home/ykravtsov/workspace/cms/adm/lib/files.class.php:110
+msgid "File"
+msgstr ""
+
+# G:\WebServers\home\sitexs.lan/www/adm/lib/images.class.php:15
+#: /home/ykravtsov/workspace/cms/adm/lib/images.class.php:15
+msgid "The file <b>"
+msgstr ""
+
+# G:\WebServers\home\sitexs.lan/www/adm/lib/images.class.php:15
+#: /home/ykravtsov/workspace/cms/adm/lib/images.class.php:15
+msgid "</b> is not an image!"
+msgstr ""
+
+# G:\WebServers\home\sitexs.lan/www/adm/templates/itemAdd.php:21
+# G:\WebServers\home\sitexs.lan/www/adm/templates/itemAdd.php:75
+# G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeAllUsersAdd.php:13
+# G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeAllUsersAdd.php:46
+# G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeInfo.php:39
+# G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeInfoEdit.php:47
+# G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeMessageAdd.php:25
+# G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeMessageAdd.php:49
+# G:\WebServers\home\sitexs.lan/www/adm/templates/usersAdd.php:7
+# G:\WebServers\home\sitexs.lan/www/adm/templates/usersAdd.php:60
+# G:\WebServers\home\sitexs.lan/www/adm/templates/usersEdit.php:7
+# G:\WebServers\home\sitexs.lan/www/adm/templates/usersEdit.php:69
+#: /home/ykravtsov/workspace/cms/adm/templates/usersAdd.php:7
+#: /home/ykravtsov/workspace/cms/adm/templates/usersAdd.php:60
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeInfoEdit.php:47
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeInfo.php:39
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeMessageAdd.php:25
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeMessageAdd.php:49
+#: /home/ykravtsov/workspace/cms/adm/templates/usersEdit.php:7
+#: /home/ykravtsov/workspace/cms/adm/templates/usersEdit.php:69
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeAllUsersAdd.php:13
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeAllUsersAdd.php:46
+#: /home/ykravtsov/workspace/cms/adm/templates/files.php:36
+#: /home/ykravtsov/workspace/cms/adm/templates/files.php:45
+#: /home/ykravtsov/workspace/cms/adm/templates/files.php:50
+#: /home/ykravtsov/workspace/cms/adm/templates/itemAdd.php:43
+#: /home/ykravtsov/workspace/cms/adm/templates/itemAdd.php:97
+msgid "Cancel"
 msgstr ""
 
 # G:\WebServers\home\sitexs.lan/www/adm/templates/conf.php:14
@@ -163,19 +359,48 @@ msgstr ""
 # G:\WebServers\home\sitexs.lan/www/adm/templates/usersAdd.php:7
 # G:\WebServers\home\sitexs.lan/www/adm/templates/usersAdd.php:60
 # G:\WebServers\home\sitexs.lan/www/adm/templates/usersEdit.php:7
+#: /home/ykravtsov/workspace/cms/adm/templates/usersAdd.php:7
+#: /home/ykravtsov/workspace/cms/adm/templates/usersAdd.php:60
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeInfoEdit.php:47
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeInfo.php:39
+#: /home/ykravtsov/workspace/cms/adm/templates/confNew.php:9
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeMessageAdd.php:25
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeMessageAdd.php:49
+#: /home/ykravtsov/workspace/cms/adm/templates/usersEdit.php:7
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeMainInfo.php:22
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeMainInfo.php:54
+#: /home/ykravtsov/workspace/cms/adm/templates/conf.php:12
+#: /home/ykravtsov/workspace/cms/adm/templates/conf.php:16
+#: /home/ykravtsov/workspace/cms/adm/templates/newsAdd.php:15
+#: /home/ykravtsov/workspace/cms/adm/templates/newsAdd.php:39
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeAllUsersAdd.php:13
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeAllUsersAdd.php:46
+#: /home/ykravtsov/workspace/cms/adm/templates/files.php:36
+#: /home/ykravtsov/workspace/cms/adm/templates/files.php:45
+#: /home/ykravtsov/workspace/cms/adm/templates/files.php:50
+#: /home/ykravtsov/workspace/cms/adm/templates/itemAdd.php:43
+#: /home/ykravtsov/workspace/cms/adm/templates/itemAdd.php:97
 msgid "Save"
 msgstr ""
 
-# G:\WebServers\home\sitexs.lan/www/adm/templates/confNew.php:2
-msgid "New parameter addition"
-msgstr ""
-
-# G:\WebServers\home\sitexs.lan/www/adm/templates/confNew.php:4
-msgid "Variable name"
-msgstr ""
-
-# G:\WebServers\home\sitexs.lan/www/adm/templates/confNew.php:5
-msgid "Parameter name"
+# G:\WebServers\home\sitexs.lan/www/adm/templates/itemAdd.php:24
+# G:\WebServers\home\sitexs.lan/www/adm/templates/newsAdd.php:18
+# G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeAllUsersAdd.php:16
+# G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeInfo.php:18
+# G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeInfoEdit.php:26
+# G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeMessageAdd.php:28
+# G:\WebServers\home\sitexs.lan/www/adm/templates/usersAdd.php:11
+# G:\WebServers\home\sitexs.lan/www/adm/templates/usersEdit.php:12
+#: /home/ykravtsov/workspace/cms/adm/templates/usersAdd.php:11
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeInfoEdit.php:26
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeInfo.php:18
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeMessageAdd.php:28
+#: /home/ykravtsov/workspace/cms/adm/templates/usersEdit.php:12
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeMainInfo.php:25
+#: /home/ykravtsov/workspace/cms/adm/templates/newsAdd.php:18
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeAllUsersAdd.php:16
+#: /home/ykravtsov/workspace/cms/adm/templates/itemAdd.php:46
+msgid "Field"
 msgstr ""
 
 # G:\WebServers\home\sitexs.lan/www/adm/templates/confNew.php:6
@@ -187,38 +412,56 @@ msgstr ""
 # G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeMessageAdd.php:29
 # G:\WebServers\home\sitexs.lan/www/adm/templates/usersAdd.php:13
 # G:\WebServers\home\sitexs.lan/www/adm/templates/usersEdit.php:14
+#: /home/ykravtsov/workspace/cms/adm/templates/usersAdd.php:13
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeInfoEdit.php:27
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeInfo.php:19
+#: /home/ykravtsov/workspace/cms/adm/templates/confNew.php:6
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeMessageAdd.php:29
+#: /home/ykravtsov/workspace/cms/adm/templates/usersEdit.php:14
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeMainInfo.php:26
+#: /home/ykravtsov/workspace/cms/adm/templates/newsAdd.php:19
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeAllUsersAdd.php:17
+#: /home/ykravtsov/workspace/cms/adm/templates/itemAdd.php:47
 msgid "Value"
 msgstr ""
 
-# G:\WebServers\home\sitexs.lan/www/adm/templates/confNew.php:8
-# G:\WebServers\home\sitexs.lan/www/adm/templates/itemAdd.php:74
-# G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeAllUsersAdd.php:40
-# G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeInfo.php:38
-# G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeInfoEdit.php:46
-# G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeMessageAdd.php:48
-# G:\WebServers\home\sitexs.lan/www/adm/templates/usersAdd.php:59
-# G:\WebServers\home\sitexs.lan/www/adm/templates/usersEdit.php:54
-msgid "Required fields"
+# G:\WebServers\home\sitexs.lan/www/adm/templates/login.php:19
+# G:\WebServers\home\sitexs.lan/www/adm/templates/usersAdd.php:17
+# G:\WebServers\home\sitexs.lan/www/adm/templates/usersAdd.php:19
+# G:\WebServers\home\sitexs.lan/www/adm/templates/usersEdit.php:24
+# G:\WebServers\home\sitexs.lan/www/adm/templates/usersEdit.php:26
+# G:\WebServers\home\sitexs.lan/www/adm/templates/usersMain.php:11
+#: /home/ykravtsov/workspace/cms/adm/templates/usersAdd.php:17
+#: /home/ykravtsov/workspace/cms/adm/templates/usersAdd.php:19
+#: /home/ykravtsov/workspace/cms/adm/templates/usersMain.php:11
+#: /home/ykravtsov/workspace/cms/adm/templates/usersEdit.php:24
+#: /home/ykravtsov/workspace/cms/adm/templates/usersEdit.php:26
+#: /home/ykravtsov/workspace/cms/adm/templates/login.php:18
+msgid "Login"
 msgstr ""
 
-# G:\WebServers\home\sitexs.lan/www/adm/templates/files.php:23
-msgid "Current dir"
+# G:\WebServers\home\sitexs.lan/www/adm/templates/login.php:23
+# G:\WebServers\home\sitexs.lan/www/adm/templates/usersAdd.php:23
+# G:\WebServers\home\sitexs.lan/www/adm/templates/usersAdd.php:25
+# G:\WebServers\home\sitexs.lan/www/adm/templates/usersEdit.php:60
+#: /home/ykravtsov/workspace/cms/adm/templates/usersAdd.php:23
+#: /home/ykravtsov/workspace/cms/adm/templates/usersAdd.php:25
+#: /home/ykravtsov/workspace/cms/adm/templates/usersEdit.php:60
+#: /home/ykravtsov/workspace/cms/adm/templates/login.php:22
+msgid "Password"
 msgstr ""
 
-# G:\WebServers\home\sitexs.lan/www/adm/templates/files.php:27
-msgid "New dir"
-msgstr ""
-
-# G:\WebServers\home\sitexs.lan/www/adm/templates/files.php:27
-msgid "Rename"
-msgstr ""
-
-# G:\WebServers\home\sitexs.lan/www/adm/templates/files.php:27
-msgid "Upload new file"
-msgstr ""
-
-# G:\WebServers\home\sitexs.lan/www/adm/templates/files.php:34
-msgid "Check all"
+# G:\WebServers\home\sitexs.lan/www/adm/templates/usersAdd.php:29
+# G:\WebServers\home\sitexs.lan/www/adm/templates/usersAdd.php:31
+# G:\WebServers\home\sitexs.lan/www/adm/templates/usersEdit.php:64
+# G:\WebServers\home\sitexs.lan/www/adm/templates/usersEdit.php:66
+#: /home/ykravtsov/workspace/cms/adm/templates/usersAdd.php:29
+#: /home/ykravtsov/workspace/cms/adm/templates/usersAdd.php:31
+#: /home/ykravtsov/workspace/cms/adm/templates/usersEdit.php:64
+#: /home/ykravtsov/workspace/cms/adm/templates/usersEdit.php:66
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeMainInfo.php:50
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeMainInfo.php:51
+msgid "Confirmation"
 msgstr ""
 
 # G:\WebServers\home\sitexs.lan/www/adm/templates/files.php:35
@@ -230,118 +473,66 @@ msgstr ""
 # G:\WebServers\home\sitexs.lan/www/adm/templates/usersAdd.php:37
 # G:\WebServers\home\sitexs.lan/www/adm/templates/usersEdit.php:32
 # G:\WebServers\home\sitexs.lan/www/adm/templates/usersMain.php:10
+#: /home/ykravtsov/workspace/cms/adm/templates/usersAdd.php:35
+#: /home/ykravtsov/workspace/cms/adm/templates/usersAdd.php:37
+#: /home/ykravtsov/workspace/cms/adm/templates/im.php:20
+#: /home/ykravtsov/workspace/cms/adm/templates/usersMain.php:10
+#: /home/ykravtsov/workspace/cms/adm/templates/usersEdit.php:30
+#: /home/ykravtsov/workspace/cms/adm/templates/usersEdit.php:32
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeUsersMain.php:22
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeAllUsersAdd.php:24
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeAllUsersAdd.php:25
+#: /home/ykravtsov/workspace/cms/adm/templates/files.php:45
+#: /home/ykravtsov/workspace/cms/adm/templates/files.php:69
 msgid "Name"
 msgstr ""
 
-# G:\WebServers\home\sitexs.lan/www/adm/templates/files.php:36
-# G:\WebServers\home\sitexs.lan/www/adm/templates/itemAdd.php:29
-msgid "Type"
+# G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeInfo.php:34
+# G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeInfoEdit.php:42
+# G:\WebServers\home\sitexs.lan/www/adm/templates/usersAdd.php:47
+# G:\WebServers\home\sitexs.lan/www/adm/templates/usersEdit.php:42
+#: /home/ykravtsov/workspace/cms/adm/templates/usersAdd.php:47
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeInfoEdit.php:42
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeInfo.php:34
+#: /home/ykravtsov/workspace/cms/adm/templates/usersEdit.php:42
+msgid "Description"
+msgstr ""
+
+# G:\WebServers\home\sitexs.lan/www/adm/templates/usersAdd.php:53
+# G:\WebServers\home\sitexs.lan/www/adm/templates/usersEdit.php:48
+# G:\WebServers\home\sitexs.lan/www/adm/templates/usersMain.php:12
+#: /home/ykravtsov/workspace/cms/adm/templates/usersAdd.php:53
+#: /home/ykravtsov/workspace/cms/adm/templates/usersMain.php:12
+#: /home/ykravtsov/workspace/cms/adm/templates/usersEdit.php:48
+msgid "Admin"
+msgstr ""
+
+# G:\WebServers\home\sitexs.lan/www/adm/templates/confNew.php:8
+# G:\WebServers\home\sitexs.lan/www/adm/templates/itemAdd.php:74
+# G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeAllUsersAdd.php:40
+# G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeInfo.php:38
+# G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeInfoEdit.php:46
+# G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeMessageAdd.php:48
+# G:\WebServers\home\sitexs.lan/www/adm/templates/usersAdd.php:59
+# G:\WebServers\home\sitexs.lan/www/adm/templates/usersEdit.php:54
+#: /home/ykravtsov/workspace/cms/adm/templates/usersAdd.php:59
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeInfoEdit.php:46
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeInfo.php:38
+#: /home/ykravtsov/workspace/cms/adm/templates/confNew.php:8
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeMessageAdd.php:48
+#: /home/ykravtsov/workspace/cms/adm/templates/usersEdit.php:54
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeAllUsersAdd.php:40
+#: /home/ykravtsov/workspace/cms/adm/templates/itemAdd.php:96
+msgid "Required fields"
 msgstr ""
 
 # G:\WebServers\home\sitexs.lan/www/adm/templates/files.php:37
 # G:\WebServers\home\sitexs.lan/www/adm/templates/im.php:21
 # G:\WebServers\home\sitexs.lan/www/adm/templates/itemMain.php:76
+#: /home/ykravtsov/workspace/cms/adm/templates/im.php:21
+#: /home/ykravtsov/workspace/cms/adm/templates/itemMain.php:76
+#: /home/ykravtsov/workspace/cms/adm/templates/files.php:71
 msgid "Size"
-msgstr ""
-
-# G:\WebServers\home\sitexs.lan/www/adm/templates/files.php:38
-msgid "Changed"
-msgstr ""
-
-# G:\WebServers\home\sitexs.lan/www/adm/templates/info.php:2
-msgid "Info"
-msgstr ""
-
-# G:\WebServers\home\sitexs.lan/www/adm/templates/info.php:4
-msgid "Site URL"
-msgstr ""
-
-# G:\WebServers\home\sitexs.lan/www/adm/templates/info.php:5
-msgid "Site IP"
-msgstr ""
-
-# G:\WebServers\home\sitexs.lan/www/adm/templates/info.php:6
-msgid "Web-server"
-msgstr ""
-
-# G:\WebServers\home\sitexs.lan/www/adm/templates/info.php:7
-msgid "OS"
-msgstr ""
-
-# G:\WebServers\home\sitexs.lan/www/adm/templates/info.php:8
-msgid "PHP version"
-msgstr ""
-
-# G:\WebServers\home\sitexs.lan/www/adm/templates/info.php:9
-msgid "MySQL version"
-msgstr ""
-
-# G:\WebServers\home\sitexs.lan/www/adm/templates/info.php:10
-msgid "CMS version"
-msgstr ""
-
-# G:\WebServers\home\sitexs.lan/www/adm/templates/itemAdd.php:21
-# G:\WebServers\home\sitexs.lan/www/adm/templates/itemAdd.php:75
-# G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeAllUsersAdd.php:13
-# G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeAllUsersAdd.php:46
-# G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeInfo.php:39
-# G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeInfoEdit.php:47
-# G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeMessageAdd.php:25
-# G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeMessageAdd.php:49
-# G:\WebServers\home\sitexs.lan/www/adm/templates/usersAdd.php:7
-# G:\WebServers\home\sitexs.lan/www/adm/templates/usersAdd.php:60
-# G:\WebServers\home\sitexs.lan/www/adm/templates/usersEdit.php:7
-# G:\WebServers\home\sitexs.lan/www/adm/templates/usersEdit.php:69
-msgid "Cancel"
-msgstr ""
-
-# G:\WebServers\home\sitexs.lan/www/adm/templates/itemAdd.php:24
-# G:\WebServers\home\sitexs.lan/www/adm/templates/newsAdd.php:18
-# G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeAllUsersAdd.php:16
-# G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeInfo.php:18
-# G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeInfoEdit.php:26
-# G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeMessageAdd.php:28
-# G:\WebServers\home\sitexs.lan/www/adm/templates/usersAdd.php:11
-# G:\WebServers\home\sitexs.lan/www/adm/templates/usersEdit.php:12
-msgid "Field"
-msgstr ""
-
-# G:\WebServers\home\sitexs.lan/www/adm/templates/itemAdd.php:42
-# G:\WebServers\home\sitexs.lan/www/adm/templates/newsAdd.php:30
-# G:\WebServers\home\sitexs.lan/www/adm/templates/newsAdd.php:31
-# G:\WebServers\home\sitexs.lan/www/adm/templates/newsMain.php:14
-msgid "Caption"
-msgstr ""
-
-# G:\WebServers\home\sitexs.lan/www/adm/templates/itemAdd.php:49
-# G:\WebServers\home\sitexs.lan/www/adm/templates/itemAdd.php:50
-msgid "Page URL"
-msgstr ""
-
-# G:\WebServers\home\sitexs.lan/www/adm/templates/itemAdd.php:53
-# G:\WebServers\home\sitexs.lan/www/adm/templates/newsAdd.php:34
-# G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeMessageAdd.php:40
-msgid "Text"
-msgstr ""
-
-# G:\WebServers\home\sitexs.lan/www/adm/templates/itemAdd.php:57
-msgid "State"
-msgstr ""
-
-# G:\WebServers\home\sitexs.lan/www/adm/templates/itemAdd.php:60
-msgid "Hidden"
-msgstr ""
-
-# G:\WebServers\home\sitexs.lan/www/adm/templates/itemAdd.php:61
-msgid "Shown"
-msgstr ""
-
-# G:\WebServers\home\sitexs.lan/www/adm/templates/itemAdd.php:66
-msgid "META Keywords"
-msgstr ""
-
-# G:\WebServers\home\sitexs.lan/www/adm/templates/itemAdd.php:70
-msgid "META Description"
 msgstr ""
 
 # G:\WebServers\home\sitexs.lan/www/adm/templates/itemMain.php:70
@@ -351,6 +542,13 @@ msgstr ""
 # G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeMessagesMain.php:3
 # G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeUsersMain.php:3
 # G:\WebServers\home\sitexs.lan/www/adm/templates/usersMain.php:3
+#: /home/ykravtsov/workspace/cms/adm/templates/itemMain.php:70
+#: /home/ykravtsov/workspace/cms/adm/templates/usersMain.php:3
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeMessagesMain.php:3
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeMain.php:3
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeAllUsersMain.php:3
+#: /home/ykravtsov/workspace/cms/adm/templates/newsMain.php:3
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeUsersMain.php:3
 msgid "Delete selected record?"
 msgstr ""
 
@@ -360,57 +558,22 @@ msgstr ""
 # G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeMain.php:25
 # G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeMessagesMain.php:25
 # G:\WebServers\home\sitexs.lan/www/adm/templates/usersMain.php:13
+#: /home/ykravtsov/workspace/cms/adm/templates/itemMain.php:76
+#: /home/ykravtsov/workspace/cms/adm/templates/usersMain.php:13
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeMessagesMain.php:25
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeMain.php:25
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeAllUsersMain.php:23
+#: /home/ykravtsov/workspace/cms/adm/templates/newsMain.php:15
 msgid "Action"
 msgstr ""
 
-# G:\WebServers\home\sitexs.lan/www/adm/templates/login.php:5
-# G:\WebServers\home\sitexs.lan/www/adm/templates/login.php:16
-# G:\WebServers\home\sitexs.lan/www/adm/templates/login.php:27
-msgid "Sign in"
-msgstr ""
-
-# G:\WebServers\home\sitexs.lan/www/adm/templates/login.php:19
-# G:\WebServers\home\sitexs.lan/www/adm/templates/usersAdd.php:17
-# G:\WebServers\home\sitexs.lan/www/adm/templates/usersAdd.php:19
-# G:\WebServers\home\sitexs.lan/www/adm/templates/usersEdit.php:24
-# G:\WebServers\home\sitexs.lan/www/adm/templates/usersEdit.php:26
-# G:\WebServers\home\sitexs.lan/www/adm/templates/usersMain.php:11
-msgid "Login"
-msgstr ""
-
-# G:\WebServers\home\sitexs.lan/www/adm/templates/login.php:23
-# G:\WebServers\home\sitexs.lan/www/adm/templates/usersAdd.php:23
-# G:\WebServers\home\sitexs.lan/www/adm/templates/usersAdd.php:25
-# G:\WebServers\home\sitexs.lan/www/adm/templates/usersEdit.php:60
-msgid "Password"
-msgstr ""
-
-# G:\WebServers\home\sitexs.lan/www/adm/templates/main.php:16
-msgid "Current user"
-msgstr ""
-
-# G:\WebServers\home\sitexs.lan/www/adm/templates/main.php:16
-msgid "Log out"
-msgstr ""
-
-# G:\WebServers\home\sitexs.lan/www/adm/templates/newsAdd.php:15
-# G:\WebServers\home\sitexs.lan/www/adm/templates/newsAdd.php:39
-msgid "Back"
-msgstr ""
-
-# G:\WebServers\home\sitexs.lan/www/adm/templates/newsAdd.php:35
-# G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeInfo.php:35
-# G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeInfoEdit.php:43
-# G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeMessageAdd.php:45
-msgid "Visual editor"
-msgstr ""
-
-# G:\WebServers\home\sitexs.lan/www/adm/templates/newsAdd.php:38
-msgid "Must be filled"
-msgstr ""
-
-# G:\WebServers\home\sitexs.lan/www/adm/templates/newsMain.php:6
-msgid "Add"
+# G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeInfoEdit.php:13
+# G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeMessageAdd.php:13
+# G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeUsersMain.php:8
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeInfoEdit.php:13
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeMessageAdd.php:13
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeUsersMain.php:8
+msgid "Mailing list"
 msgstr ""
 
 # G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeAllUsersAdd.php:7
@@ -424,28 +587,18 @@ msgstr ""
 # G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeMessagesMain.php:8
 # G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeMessagesMain.php:9
 # G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeUsersMain.php:9
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeInfoEdit.php:14
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeMessageAdd.php:14
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeMessagesMain.php:8
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeMessagesMain.php:9
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeMainInfo.php:12
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeMainInfo.php:15
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeMain.php:8
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeAllUsersMain.php:11
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeUsersMain.php:9
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeAllUsersAdd.php:7
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeAllUsersAdd.php:42
 msgid "Mailing lists"
-msgstr ""
-
-# G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeAllUsersAdd.php:8
-# G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeAllUsersMain.php:12
-# G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeMain.php:12
-# G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeNav.php:5
-msgid "Preferences"
-msgstr ""
-
-# G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeAllUsersAdd.php:32
-msgid "City"
-msgstr ""
-
-# G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeAllUsersAdd.php:36
-msgid "Country"
-msgstr ""
-
-# G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeAllUsersMain.php:8
-# G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeMain.php:11
-# G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeNav.php:4
-msgid "Subscribers"
 msgstr ""
 
 # G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeInfo.php:26
@@ -456,114 +609,378 @@ msgstr ""
 # G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeMessageAdd.php:36
 # G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeMessageAdd.php:37
 # G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeMessagesMain.php:23
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeInfoEdit.php:34
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeInfoEdit.php:35
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeInfo.php:26
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeInfo.php:27
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeMessageAdd.php:36
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeMessageAdd.php:37
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeMessagesMain.php:23
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeMain.php:23
 msgid "Subject"
 msgstr ""
 
 # G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeInfo.php:30
 # G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeInfoEdit.php:38
 # G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeMain.php:24
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeInfoEdit.php:38
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeInfo.php:30
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeMain.php:24
 msgid "Period"
 msgstr ""
 
-# G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeInfo.php:34
-# G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeInfoEdit.php:42
-# G:\WebServers\home\sitexs.lan/www/adm/templates/usersAdd.php:47
-# G:\WebServers\home\sitexs.lan/www/adm/templates/usersEdit.php:42
-msgid "Description"
+# G:\WebServers\home\sitexs.lan/www/adm/templates/newsAdd.php:35
+# G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeInfo.php:35
+# G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeInfoEdit.php:43
+# G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeMessageAdd.php:45
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeInfoEdit.php:43
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeInfo.php:35
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeMessageAdd.php:45
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeMainInfo.php:46
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeMainInfo.php:51
+#: /home/ykravtsov/workspace/cms/adm/templates/newsAdd.php:35
+msgid "Visual editor"
 msgstr ""
 
-# G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeInfoEdit.php:13
-# G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeMessageAdd.php:13
-# G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeUsersMain.php:8
-msgid "Mailing list"
+# G:\WebServers\home\sitexs.lan/www/adm/templates/confNew.php:2
+#: /home/ykravtsov/workspace/cms/adm/templates/confNew.php:2
+msgid "New parameter addition"
+msgstr ""
+
+# G:\WebServers\home\sitexs.lan/www/adm/templates/confNew.php:4
+#: /home/ykravtsov/workspace/cms/adm/templates/confNew.php:4
+msgid "Variable name"
+msgstr ""
+
+# G:\WebServers\home\sitexs.lan/www/adm/templates/confNew.php:5
+#: /home/ykravtsov/workspace/cms/adm/templates/confNew.php:5
+msgid "Parameter name"
+msgstr ""
+
+# G:\WebServers\home\sitexs.lan/www/adm/templates/info.php:2
+#: /home/ykravtsov/workspace/cms/adm/templates/info.php:2
+msgid "Info"
+msgstr ""
+
+# G:\WebServers\home\sitexs.lan/www/adm/templates/info.php:4
+#: /home/ykravtsov/workspace/cms/adm/templates/info.php:4
+msgid "Site URL"
+msgstr ""
+
+# G:\WebServers\home\sitexs.lan/www/adm/templates/info.php:5
+#: /home/ykravtsov/workspace/cms/adm/templates/info.php:5
+msgid "Site IP"
+msgstr ""
+
+# G:\WebServers\home\sitexs.lan/www/adm/templates/info.php:6
+#: /home/ykravtsov/workspace/cms/adm/templates/info.php:6
+msgid "Web-server"
+msgstr ""
+
+# G:\WebServers\home\sitexs.lan/www/adm/templates/info.php:7
+#: /home/ykravtsov/workspace/cms/adm/templates/info.php:7
+msgid "OS"
+msgstr ""
+
+# G:\WebServers\home\sitexs.lan/www/adm/templates/info.php:8
+#: /home/ykravtsov/workspace/cms/adm/templates/info.php:8
+msgid "PHP version"
+msgstr ""
+
+# G:\WebServers\home\sitexs.lan/www/adm/templates/info.php:9
+#: /home/ykravtsov/workspace/cms/adm/templates/info.php:9
+msgid "MySQL version"
+msgstr ""
+
+# G:\WebServers\home\sitexs.lan/www/adm/templates/info.php:10
+#: /home/ykravtsov/workspace/cms/adm/templates/info.php:10
+msgid "CMS version"
+msgstr ""
+
+# G:\WebServers\home\sitexs.lan/www/adm/templates/wizard.php:28
+#: /home/ykravtsov/workspace/cms/adm/templates/wizard.php:28
+msgid "Next"
+msgstr ""
+
+#: /home/ykravtsov/workspace/cms/adm/templates/confItem.php:1
+#: /home/ykravtsov/workspace/cms/adm/templates/ve.php:5
+msgid "Visual Editor"
+msgstr ""
+
+# G:\WebServers\home\sitexs.lan/www/adm/templates/itemAdd.php:53
+# G:\WebServers\home\sitexs.lan/www/adm/templates/newsAdd.php:34
+# G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeMessageAdd.php:40
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeMessageAdd.php:40
+#: /home/ykravtsov/workspace/cms/adm/templates/newsAdd.php:34
+#: /home/ykravtsov/workspace/cms/adm/templates/itemAdd.php:75
+msgid "Text"
+msgstr ""
+
+# G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeMessageAdd.php:44
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeMessageAdd.php:44
+msgid "HTML"
+msgstr ""
+
+# G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeMessagesMain.php:24
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeMessagesMain.php:24
+msgid "Sent"
+msgstr ""
+
+#: /home/ykravtsov/workspace/cms/adm/templates/ve.php:5
+msgid "powered by"
+msgstr ""
+
+#: /home/ykravtsov/workspace/cms/adm/templates/ve.php:32
+#: /home/ykravtsov/workspace/cms/adm/templates/itemAdd.php:33
+msgid "en"
+msgstr ""
+
+# G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeNav.php:3
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeNav.php:3
+msgid "Messages"
+msgstr ""
+
+# G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeAllUsersMain.php:8
+# G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeMain.php:11
+# G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeNav.php:4
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeNav.php:4
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeMainInfo.php:16
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeMain.php:11
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeAllUsersMain.php:8
+msgid "Subscribers"
+msgstr ""
+
+# G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeAllUsersAdd.php:8
+# G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeAllUsersMain.php:12
+# G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeMain.php:12
+# G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeNav.php:5
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeNav.php:5
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeMain.php:12
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeAllUsersMain.php:12
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeAllUsersAdd.php:8
+msgid "Preferences"
+msgstr ""
+
+# G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeMessagesTR.php:5
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeMessagesTR.php:5
+msgid "Test"
+msgstr ""
+
+# G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeMessagesTR.php:5
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeMessagesTR.php:5
+msgid "Send"
+msgstr ""
+
+# G:\WebServers\home\sitexs.lan/www/adm/templates/usersEdit.php:18
+# G:\WebServers\home\sitexs.lan/www/adm/templates/usersEdit.php:20
+#: /home/ykravtsov/workspace/cms/adm/templates/usersEdit.php:18
+#: /home/ykravtsov/workspace/cms/adm/templates/usersEdit.php:20
+msgid "Id"
+msgstr ""
+
+# G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeUsersMain.php:23
+# G:\WebServers\home\sitexs.lan/www/adm/templates/usersEdit.php:36
+#: /home/ykravtsov/workspace/cms/adm/templates/usersEdit.php:36
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeUsersMain.php:23
+msgid "E-mail"
+msgstr ""
+
+# G:\WebServers\home\sitexs.lan/www/adm/templates/usersEdit.php:55
+#: /home/ykravtsov/workspace/cms/adm/templates/usersEdit.php:55
+msgid "Change password"
+msgstr ""
+
+# G:\WebServers\home\sitexs.lan/www/adm/templates/usersEdit.php:58
+#: /home/ykravtsov/workspace/cms/adm/templates/usersEdit.php:58
+msgid "New password"
+msgstr ""
+
+# G:\WebServers\home\sitexs.lan/www/adm/templates/usersEdit.php:69
+#: /home/ykravtsov/workspace/cms/adm/templates/usersEdit.php:69
+msgid "Change"
 msgstr ""
 
 # G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeMainInfo.php:29
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeMainInfo.php:29
 msgid "E-mail FROM"
 msgstr ""
 
 # G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeMainInfo.php:33
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeMainInfo.php:33
 msgid "E-mail for test"
 msgstr ""
 
 # G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeMainInfo.php:37
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeMainInfo.php:37
 msgid "Relative URL"
 msgstr ""
 
 # G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeMainInfo.php:41
 # G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeMainInfo.php:42
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeMainInfo.php:41
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeMainInfo.php:42
 msgid "TXT version"
 msgstr ""
 
 # G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeMainInfo.php:45
 # G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeMainInfo.php:46
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeMainInfo.php:45
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeMainInfo.php:46
 msgid "HTML version"
 msgstr ""
 
-# G:\WebServers\home\sitexs.lan/www/adm/templates/usersAdd.php:29
-# G:\WebServers\home\sitexs.lan/www/adm/templates/usersAdd.php:31
-# G:\WebServers\home\sitexs.lan/www/adm/templates/usersEdit.php:64
-# G:\WebServers\home\sitexs.lan/www/adm/templates/usersEdit.php:66
-msgid "Confirmation"
+# G:\WebServers\home\sitexs.lan/www/adm/templates/newsMain.php:6
+#: /home/ykravtsov/workspace/cms/adm/templates/newsMain.php:6
+msgid "Add"
 msgstr ""
 
-# G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeMessageAdd.php:44
-msgid "HTML"
-msgstr ""
-
-# G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeMessagesMain.php:24
-msgid "Sent"
-msgstr ""
-
-# G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeMessagesTR.php:5
-msgid "Test"
-msgstr ""
-
-# G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeMessagesTR.php:5
-msgid "Send"
-msgstr ""
-
-# G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeNav.php:3
-msgid "Messages"
-msgstr ""
-
-# G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeUsersMain.php:23
-# G:\WebServers\home\sitexs.lan/www/adm/templates/usersEdit.php:36
-msgid "E-mail"
+# G:\WebServers\home\sitexs.lan/www/adm/templates/itemAdd.php:42
+# G:\WebServers\home\sitexs.lan/www/adm/templates/newsAdd.php:30
+# G:\WebServers\home\sitexs.lan/www/adm/templates/newsAdd.php:31
+# G:\WebServers\home\sitexs.lan/www/adm/templates/newsMain.php:14
+#: /home/ykravtsov/workspace/cms/adm/templates/newsMain.php:14
+#: /home/ykravtsov/workspace/cms/adm/templates/newsAdd.php:30
+#: /home/ykravtsov/workspace/cms/adm/templates/newsAdd.php:31
+#: /home/ykravtsov/workspace/cms/adm/templates/itemAdd.php:64
+msgid "Caption"
 msgstr ""
 
 # G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeUsersMain.php:27
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeUsersMain.php:27
 msgid "Add all subscribers to the current list"
 msgstr ""
 
-# G:\WebServers\home\sitexs.lan/www/adm/templates/usersAdd.php:53
-# G:\WebServers\home\sitexs.lan/www/adm/templates/usersEdit.php:48
-# G:\WebServers\home\sitexs.lan/www/adm/templates/usersMain.php:12
-msgid "Admin"
+# G:\WebServers\home\sitexs.lan/www/adm/templates/main.php:16
+#: /home/ykravtsov/workspace/cms/adm/templates/main.php:11
+msgid "Current user"
 msgstr ""
 
-# G:\WebServers\home\sitexs.lan/www/adm/templates/usersEdit.php:18
-# G:\WebServers\home\sitexs.lan/www/adm/templates/usersEdit.php:20
-msgid "Id"
+# G:\WebServers\home\sitexs.lan/www/adm/templates/main.php:16
+#: /home/ykravtsov/workspace/cms/adm/templates/main.php:11
+msgid "Log out"
 msgstr ""
 
-# G:\WebServers\home\sitexs.lan/www/adm/templates/usersEdit.php:55
-msgid "Change password"
+# G:\WebServers\home\sitexs.lan/www/adm/templates/newsAdd.php:38
+#: /home/ykravtsov/workspace/cms/adm/templates/newsAdd.php:38
+msgid "Must be filled"
 msgstr ""
 
-# G:\WebServers\home\sitexs.lan/www/adm/templates/usersEdit.php:58
-msgid "New password"
+# G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeAllUsersAdd.php:32
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeAllUsersAdd.php:32
+msgid "City"
 msgstr ""
 
-# G:\WebServers\home\sitexs.lan/www/adm/templates/usersEdit.php:69
-msgid "Change"
+# G:\WebServers\home\sitexs.lan/www/adm/templates/subscribeAllUsersAdd.php:36
+#: /home/ykravtsov/workspace/cms/adm/templates/subscribeAllUsersAdd.php:36
+msgid "Country"
 msgstr ""
 
-# G:\WebServers\home\sitexs.lan/www/adm/templates/wizard.php:28
-msgid "Next"
+#: /home/ykravtsov/workspace/cms/adm/templates/files.php:27
+msgid "file"
 msgstr ""
 
-# G:\WebServers\home\sitexs.lan/www/lib/elements.class.php:23
-msgid "Home"
+# G:\WebServers\home\sitexs.lan/www/adm/templates/files.php:27
+#: /home/ykravtsov/workspace/cms/adm/templates/files.php:36
+#: /home/ykravtsov/workspace/cms/adm/templates/files.php:60
+msgid "Rename"
+msgstr ""
+
+#: /home/ykravtsov/workspace/cms/adm/templates/files.php:36
+msgid "Old name"
+msgstr ""
+
+#: /home/ykravtsov/workspace/cms/adm/templates/files.php:36
+msgid "New name"
+msgstr ""
+
+#: /home/ykravtsov/workspace/cms/adm/templates/files.php:36
+#: /home/ykravtsov/workspace/cms/adm/templates/files.php:45
+#: /home/ykravtsov/workspace/cms/adm/templates/files.php:50
+msgid "No more than 30 characters"
+msgstr ""
+
+#: /home/ykravtsov/workspace/cms/adm/templates/files.php:45
+msgid "New folder"
+msgstr ""
+
+#: /home/ykravtsov/workspace/cms/adm/templates/files.php:45
+msgid "Only Latin letters, numbers, underscores (_) and hyphen (-)"
+msgstr ""
+
+# G:\WebServers\home\sitexs.lan/www/adm/templates/files.php:27
+#: /home/ykravtsov/workspace/cms/adm/templates/files.php:50
+#: /home/ykravtsov/workspace/cms/adm/templates/files.php:60
+msgid "Upload new file"
+msgstr ""
+
+#: /home/ykravtsov/workspace/cms/adm/templates/files.php:50
+msgid "Uploading"
+msgstr ""
+
+#: /home/ykravtsov/workspace/cms/adm/templates/files.php:50
+msgid "Choose a file"
+msgstr ""
+
+#: /home/ykravtsov/workspace/cms/adm/templates/files.php:50
+msgid "Only Latin letters, numbers, point (.), underscore (_) and hyphen (-)"
+msgstr ""
+
+# G:\WebServers\home\sitexs.lan/www/adm/templates/files.php:23
+#: /home/ykravtsov/workspace/cms/adm/templates/files.php:56
+msgid "Current dir"
+msgstr ""
+
+# G:\WebServers\home\sitexs.lan/www/adm/templates/files.php:27
+#: /home/ykravtsov/workspace/cms/adm/templates/files.php:60
+msgid "New dir"
+msgstr ""
+
+# G:\WebServers\home\sitexs.lan/www/adm/templates/files.php:34
+#: /home/ykravtsov/workspace/cms/adm/templates/files.php:68
+msgid "Check all"
+msgstr ""
+
+# G:\WebServers\home\sitexs.lan/www/adm/templates/files.php:36
+# G:\WebServers\home\sitexs.lan/www/adm/templates/itemAdd.php:29
+#: /home/ykravtsov/workspace/cms/adm/templates/files.php:70
+#: /home/ykravtsov/workspace/cms/adm/templates/itemAdd.php:51
+msgid "Type"
+msgstr ""
+
+# G:\WebServers\home\sitexs.lan/www/adm/templates/files.php:38
+#: /home/ykravtsov/workspace/cms/adm/templates/files.php:72
+msgid "Changed"
+msgstr ""
+
+# G:\WebServers\home\sitexs.lan/www/adm/templates/itemAdd.php:49
+# G:\WebServers\home\sitexs.lan/www/adm/templates/itemAdd.php:50
+#: /home/ykravtsov/workspace/cms/adm/templates/itemAdd.php:71
+#: /home/ykravtsov/workspace/cms/adm/templates/itemAdd.php:72
+msgid "Page URL"
+msgstr ""
+
+# G:\WebServers\home\sitexs.lan/www/adm/templates/itemAdd.php:57
+#: /home/ykravtsov/workspace/cms/adm/templates/itemAdd.php:79
+msgid "State"
+msgstr ""
+
+# G:\WebServers\home\sitexs.lan/www/adm/templates/itemAdd.php:60
+#: /home/ykravtsov/workspace/cms/adm/templates/itemAdd.php:82
+msgid "Hidden"
+msgstr ""
+
+# G:\WebServers\home\sitexs.lan/www/adm/templates/itemAdd.php:61
+#: /home/ykravtsov/workspace/cms/adm/templates/itemAdd.php:83
+msgid "Shown"
+msgstr ""
+
+# G:\WebServers\home\sitexs.lan/www/adm/templates/itemAdd.php:66
+#: /home/ykravtsov/workspace/cms/adm/templates/itemAdd.php:88
+msgid "META Keywords"
+msgstr ""
+
+# G:\WebServers\home\sitexs.lan/www/adm/templates/itemAdd.php:70
+#: /home/ykravtsov/workspace/cms/adm/templates/itemAdd.php:92
+msgid "META Description"
 msgstr ""
 
