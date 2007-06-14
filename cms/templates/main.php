@@ -13,8 +13,7 @@
 </head>
 <body>
 <div id="page">
-
-
+<div id="breadcrumbs"><?php echo $ref->elements["breadcrumbs"] ?></div>
 <div id="header">
 	<div id="headerimg">
 		<h1><a href="/"><?php echo $ref->config["site_name"] ?></a></h1>
@@ -24,7 +23,6 @@
 </div>
 <hr />
 	<div id="content" class="narrowcolumn">
-<div><?php echo $ref->elements["breadcrumbs"] ?></div>
 <?php echo $ref->elements["contenttitle"] ?>
 <?php echo $ref->elements["content"] ?>
 	</div>
@@ -40,13 +38,10 @@
 
 <hr />
 <div id="footer">
-<!-- If you'd like to support WordPress, having the "powered by" link somewhere on your blog is the best way, it's our only promotion or advertising. -->
 	<p>
-		<?php echo $ref->config["site_name"] ?> is proudly powered by
+	<br />
+		"<?php echo $ref->config["site_name"] ?>" is powered by
 		<a href="http://sitexs.sf.net/">SiteXS CMS</a>
-		<br /><a href="http://www.yarlson.com/index.php/feed/">Entries (RSS)</a>
-		and <a href="http://www.yarlson.com/index.php/comments/feed/">Comments (RSS)</a>.
-		<!-- 20 queries. 0.529 seconds. -->
 
 	</p>
 </div>
