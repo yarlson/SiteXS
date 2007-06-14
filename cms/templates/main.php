@@ -49,6 +49,6 @@
 </div>
 </div>
 
-<!-- Gorgeous design by Michael Heilemann - http://binarybonsai.com/kubrick/ -->
+<!-- Based on design by Michael Heilemann - http://binarybonsai.com/kubrick/ -->
 </body>
 </html>
