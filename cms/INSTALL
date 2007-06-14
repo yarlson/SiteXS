@@ -1,0 +1,5 @@
+1. Untar
+2. Make writable by others: ./download/, ./images/ and ./lib/db.conf.php
+3. Run http://example.com/install.php (change example.com to your domain)
+3. Follow instructions
+4. Enjoy!
