@@ -70,7 +70,7 @@ class elements {
 	}
 
 	function contentTitle() {
-		if ($this->properties["id"]>1) $contentTitle="<h1>".$this->properties["title"]."</h1>";
+		if ($this->properties["id"]>1) $contentTitle="<h2>".$this->properties["title"]."</h2>";
 		return $contentTitle;
 	}
 

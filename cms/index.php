@@ -21,8 +21,6 @@ $page->parseURI();$page->findPath();$page->sendHeader();$page->getElements();$pa
 
 if ($page->get["version"]=="forprint") 
 	$template_name="mainPr";
-elseif ($page->dirs["id"][$page->dirs["count"]-1]!=1)
-	$template_name="second";
 else
 	$template_name="main";
 
