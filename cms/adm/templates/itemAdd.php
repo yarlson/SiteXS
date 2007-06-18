@@ -38,7 +38,6 @@ textarea, input {font-family: tahoma;width: 100%;font-size: 100%;}
 <h3><?php echo $ref->header ?></h3>
 <?php echo $ref->message ?>
 <form action="?chid=<?php echo $ref->chid ?>&action=<?php echo $ref->action ?>&lid=<?php echo $ref->lid ?>" method="post" name="FORMPOST"<?php echo $ref->onsubmit ?>>
-<input type="hidden" name="fields[article]" value="<?php echo $ref->data[article] ?>">
 <input type="hidden" name="fields[pid]" value="<?php echo $ref->data[pid] ?>">
 <p align="center"><input type="button" value="<?php echo __("Cancel") ?>" style="width: auto;" onclick="javascript: history.go(-1);">&nbsp;&nbsp;<input type="submit" value="<?php echo __("Save") ?>" class="save"></p>
 <table border="0" cellspacing="0" cellpadding="5" width="100%">
@@ -81,6 +80,14 @@ textarea, input {font-family: tahoma;width: 100%;font-size: 100%;}
 				<select name="fields[state]">
 					<option value="0"<?php echo $this->state_selected[0] ?> style="color: red;"><?php echo __("Hidden") ?></option>
 					<option value="1"<?php echo $this->state_selected[1] ?> style="color: blue;"><?php echo __("Shown") ?></option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td class="nw"><?php echo __("Menu") ?></td>
+			<td>
+				<select name="fields[menu]">
+					<?php echo $this->menus ?>
 				</select>
 			</td>
 		</tr>
