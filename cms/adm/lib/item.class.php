@@ -41,7 +41,14 @@ class item {
 			$i++;
 			$this->types.="<option value=\"$data[id]\">$data[title]</option>";
 		}
+
+		$res1=$db->query("select * from menus order by id");
 		
+		while($data=$db->fetch_array($res1)) {
+			$i++;
+			$this->menus.="<option value=\"$data[id]\">$data[name]</option>";
+		}
+	
 		$ts[$this->level]=" selected";
 		$true=($this->level==4) ? " && true" : " && false";
 		$this->data["pid"]=$this->pid;
@@ -67,11 +74,18 @@ class item {
 			$this->types.="<option".(($this->data["type"]==$data1[id]) ? " selected" : "")." value=\"$data1[id]\">$data1[title]</option>";
 		}
 		
+		$res1=$db->query("select * from menus order by id");
+		
+		while($data1=$db->fetch_array($res1)) {
+			$i++;
+			$this->menus.="<option".(($this->data["menu"]==$data1[id]) ? " selected" : "")." value=\"$data1[id]\">$data1[name]</option>";
+		}
+		
 		$this->select=admin::getDateSelectOptions($this->data["time"]);
 		$chid=$this->chid;
 		$this->action="appendEdit";
 		$this->id='<tr>
-			<td>№</td>
+			<td></td>
 			<td><input maxlength="14" name="fields[id]" size="14" value="'.$this->id.'" readonly="readonly" style="width: auto;" value="'.$this->id.'"></td>
 		</tr>';
 		
@@ -131,7 +145,7 @@ class item {
 			$ts[$data["type"]]=" selected";
 			$true=($data["type"]==4) ? " && true" : " && false";
 			$data=$_SESSION["fields"];
-			$header="Добавление";
+			$header="";
 			$lid=$this->lid;
 			$library["chid"]=admin::getTypeID("library");
 			eval("\$content=\"".admin::template("itemAdd", "FORMPOST", array("fields[title]"=>"EXISTS", "fields[url]"=>"EXISTS"))."\";");
