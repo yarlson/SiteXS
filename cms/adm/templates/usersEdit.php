@@ -2,7 +2,7 @@
 textarea, input {font-family: tahoma;width: 100%;font-size: 100%;}
 </style>
 <h3><?php echo $this->header ?></h3>
-$validator
+<?php echo $this->validator ?>
 <form action="?chid=<?php echo $this->chid ?>&action=<?php echo $this->action ?>" method="post" name="FORMPOST"<?php echo $this->onsubmit ?>>
 <p align="center"><input type="button" value="<?php echo __("Cancel") ?>" style="width: auto;" onclick="javascript: history.go(-1);">&nbsp;&nbsp;<input type="submit" value="<?php echo __("Save") ?>" class="save" /></p>
 <input name="fields[id]" value="<?php echo $this->data["id"] ?>" type="hidden">
