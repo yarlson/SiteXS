@@ -13,7 +13,7 @@ class admin {
 		session_start();
 		if ($_GET["action"]=="logout") {
 			session_destroy();
-			header("Location: ./");
+			header("Location: /adm/");
 		}
 		if (!$_SESSION["user_id"]) {
 			if ($_POST["user"] && $_POST["pass"]) {
@@ -23,7 +23,7 @@ class admin {
 				$data=$db->fetch_array($res);
 				if ($data["pass"]==md5($_POST["pass"])) {
 					$_SESSION["user_id"]=$data["id"];
-					header("Location: ./");
+					header("Location: /adm/");
 				}
 				else {
 					$this->message="<h3 style=\"color: red;\">".__("Wrong login or password!!!")."</h3>";
@@ -56,16 +56,16 @@ class admin {
 
 	function setMenu ($id=0) {
 		
-		for ($i=1; $i<=count($this->nav); $i++) {
-			$this->i=$i;
-			if ($this->nav[$i][0]==$id) {
-				if (!$this->nav[$i][4] || ($this->nav[$i][4] && $this->user_admin)) {
-					$im = ($this->nav[$i][3]) ? $this->nav[$i][3] : "dot.gif";
-					$this->nameI="<img src=\"i/".$im."\" alt=\"\" border=\"0\" align=\"absmiddle\" hspace=\"6\" width=\"16\" height=\"16\">".$this->nav[$i][1];
-					if ($i==$this->id && !$this->action) {
+		foreach ($this->nav as $key => $value) {
+			$this->i=$key;
+			if ($value[0]==$id) {
+				if (!$value[4] || ($value[4] && $this->user_admin)) {
+					$im = ($value[3]) ? $value[3] : "dot.gif";
+					$this->nameI="<img src=\"i/".$im."\" alt=\"\" border=\"0\" align=\"absmiddle\" hspace=\"6\" width=\"16\" height=\"16\">".$value[1];
+					if ($key==$this->id && !$this->action) {
 						$menu.=$this->template("menuItemCurM", $this);
 					}
-					elseif ($i==$this->nav[$this->id][0] || ($i==$this->id && $this->action)) {
+					elseif ($key==$this->nav[$this->id][0] || ($key==$this->id && $this->action)) {
 						$menu.=$this->template("menuItemCur", $this);
 					}
 					else {
@@ -134,7 +134,10 @@ class admin {
 		if (!$g) {
 			$main=$this->template("main", $this);
 		}
-		else $main=$this->content;
+		elseif ($g="tinymce")
+			$main=$this->template("main-tinymce", $this);
+		else
+			$main=$this->content;
 		return $main;
 		
 	}
@@ -158,7 +161,7 @@ class admin {
 		for ($i=(int)date("Y"); $i>1994; $i--) {
 			$select["year"].="<option value=\"$i\"".((@date("Y", $date)==$i) ? " selected" : "").">$i</option>";
 		}
-		$month=array("1"=>"€нвар€","феврал€","марта","апрел€","ма€","июн€","июл€","августа","сент€бр€","окт€бр€","но€бр€","декабр€");
+		$month=array("1"=>__("January"), __("February"), __("March"), __("April"), __("May"), __("June"), __("July"), __("August"), __("September"), __("November"), __("December"));
 		for ($i=1; $i<13;$i++) {
 			$select["month"].="<option value=\"$i\"".((@date("m", $date)==$i) ? " selected" : "").">$month[$i]</option>";
 		}
