@@ -1,6 +1,6 @@
 <?php
 $DB["host"]="localhost";
-$DB["dbName"]="sitexs";
+$DB["dbName"]="aladja";
 $DB["user"]="root";
 $DB["pass"]="";
 ?>
