@@ -94,6 +94,7 @@ switch ($step) {
 			if ($db_sel){
 				$templine = '';
 				$lines = file("adm/sitexs.sql");
+				mysql_query("SET NAMES 'utf8'", $db);
 				foreach ($lines as $line_num => $line) {
 					if (substr($line, 0, 2) != '--' && $line != '') {
 						$templine .= $line;

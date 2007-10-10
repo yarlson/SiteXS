@@ -21,13 +21,14 @@ class sql {
     }
 
     function connect() {
-        $this->conn_id = mysql_connect($this->db['host'].":".$this->port,$this->db['user'],$this->db['pass']);
+        $this->conn_id = mysql_pconnect($this->db['host'].":".$this->port,$this->db['user'],$this->db['pass']);
         if ($this->conn_id == 0) {
             $this->sql_error("Connection Error");
         }
         if (!mysql_select_db($this->db['dbName'], $this->conn_id)) {
             $this->sql_error("Database Error");
         }
+        $this->query("SET NAMES 'utf8'");
         return $this->conn_id;
     }
 
@@ -89,9 +90,6 @@ class sql {
 		mysql_data_seek ($result, $number);
 	}
 	
-	function insert_id () {
-		return mysql_insert_id ($this->conn_id);
-	}
     function close_db() {
         if($this->conn_id) {
             return mysql_close($this->conn_id);

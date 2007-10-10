@@ -28,7 +28,7 @@ class news {
 			eval('$newsTR.="'.admin::template("newsTR").'";');
 		}
 		
-		$pageBar=$pagination->bar();
+		$this->pageBar=$pagination->bar();
 		
 		eval('$content="'.admin::template("newsMain").'";');
 		$this->elements["content"]=$content;

@@ -16,13 +16,28 @@ class articles {
 		$this->level=$HTTP_GET_VARS["level"];
 		$this->fields=$HTTP_POST_VARS["fields"];
 		$this->date=$HTTP_POST_VARS["date"];
+		$this->db=new sql;
+		$this->db->connect();
 	}
 
 	function defaultAction () {
-		$open_nodes=$this->_get_open_nodes($this->id);
-		$this->content=$this->_get_tree(0, $open_nodes);
-		$this->lid=($this->id) ? $this->id : 0;
-		$this->elements["content"]=admin::template("articleMain", $this);
+		$chid=$this->chid;
+		
+		include "lib/pagination.class.php";
+		
+		$adminConfig=admin::adminConfig();
+		$pagination=new pagination ("?chid=".$this->chid."&", $this->page, $adminConfig["recPerPage"], '', "articles", "id");
+		$res=$this->db->query("select id, time, title from articles order by id desc ".$pagination->limit());
+		$page =($this->page) ? "&page=".$this->page : "";
+		while($this->data=$this->db->fetch_array($res)) {
+			$this->data["date"]=($this->data["time"]) ? @date("d.m.Y", $this->data["time"]) : "";
+			$this->articlesTR.=admin::template("articlesTR", $this);
+		}
+		
+		$this->pageBar=$pagination->bar();
+		
+		$content=admin::template("articlesMain", $this);
+		$this->elements["content"]=$content;
 	}
 
 	function showStructure () {
@@ -34,10 +49,10 @@ class articles {
 		$this->chid=$this->chid;
 		$this->action="appendAdd";
 		
-		$db=new sql;
-		$db->connect();
-		$res=$db->query("select * from types order by id");
-		while($data=$db->fetch_array($res)) {
+		$this->db=new sql;
+		$this->db->connect();
+		$res=$this->db->query("select * from types order by id");
+		while($data=$this->db->fetch_array($res)) {
 			$i++;
 			$this->types.="<option value=\"$data[id]\">$data[title]</option>";
 		}
@@ -48,21 +63,21 @@ class articles {
 		$this->header=__("Add new");
 		$lid=$this->lid;
 		$library["chid"]=admin::getTypeID("library");
-		$this->elements["content"]=admin::template("articleAdd", $this);
+		$this->elements["content"]=admin::template("articlesAdd", $this);
 	}
 
 	function edit () {
-		$db=new sql;
-		$db->connect();
-		$res=$db->query("select * from articles where id=".$this->id);
-		$this->data=$db->fetch_array($res);
+		$this->db=new sql;
+		$this->db->connect();
+		$res=$this->db->query("select * from articles where id=".$this->id);
+		$this->data=$this->db->fetch_array($res);
 		$this->data["text"]=htmlspecialchars($this->data["text"]);
 		$true=($this->data["type"]==4) ? " && true" : " && false";
 		
-		$db=new sql;
-		$db->connect();
-		$res1=$db->query("select * from types order by id");
-		while($data1=$db->fetch_array($res1)) {
+		$this->db=new sql;
+		$this->db->connect();
+		$res1=$this->db->query("select * from types order by id");
+		while($data1=$this->db->fetch_array($res1)) {
 			$i++;
 			$this->types.="<option".(($this->data["type"]==$data1[id]) ? " selected" : "")." value=\"$data1[id]\">$data1[title]</option>";
 		}
@@ -75,12 +90,12 @@ class articles {
 			<td><input maxlength="14" name="fields[id]" size="14" value="'.$this->id.'" readonly="readonly" style="width: auto;" value="'.$this->id.'"></td>
 		</tr>';
 		
-		//$res2=$db->query("select id, name, short_text, time from library where id='".$data["article"]."'");
+		//$res2=$this->db->query("select id, name, short_text, time from library where id='".$data["article"]."'");
 		
 		$this->state_selected[$this->data["state"]]=" selected";
 		$this->header=__("Edit");
 		$lid=$this->lid;
-		$content=admin::template("articleAdd", $this);
+		$content=admin::template("articlesAdd", $this);
 		$this->elements["content"]=$content;
 	}
 
@@ -88,24 +103,20 @@ class articles {
 		session_start();
 		unset($_SESSION["wrongFields"]);
 		$this->fields["time"]=mktime(0, 0, 0, $this->date["month"], $this->date["day"], $this->date["year"]);
-		srand((double)microtime()*1000000);
-		$this->fields["sortorder"]=0;
-		$this->fields["sid"]=md5 (uniqid (rand()));
 		foreach($this->fields as $key => $value) {
 			$query.="$key='".$value."', ";
 		}
 		$query.="ctime=".@time().", lmtime=".@time();
-		$db=new sql;
-		$db->connect();
-		$res=$db->query("select id from articles where url='".$this->fields["url"]."' and pid='".$this->fields["pid"]."'");
-		if ($db->num_rows($res)) {
+		$this->db=new sql;
+		$this->db->connect();
+		$res=$this->db->query("select id from articles where url='".$this->fields["url"]."'");
+		if ($this->db->num_rows($res)) {
 			$_SESSION["fields"]=$this->fields;
 			$_SESSION["wrongFields"][]="The page with such URI <b>".$this->fields["url"]."</b> exists!";
 			header("Location: ?chid=".$this->chid."&action=wrongAdd&id=".$this->lid);
 			exit;
 		}
-		$db->query("insert into chapters set $query");
-		$db->query("UPDATE chapters SET sortorder= sortorder+1 WHERE pid='".$this->fields["pid"]."'");
+		$this->db->query("insert into articles set $query");
 		header("Location: ?chid=".$this->chid."&m=2&id=".$this->lid);
 	}
 
@@ -120,10 +131,10 @@ class articles {
 			$chid=$this->chid;
 			$action="appendAdd";
 			
-			$db=new sql;
-			$db->connect();
-			$res=$db->query("select * from types order by id");
-			while($data1=$db->fetch_array($res)) {
+			$this->db=new sql;
+			$this->db->connect();
+			$res=$this->db->query("select * from types order by id");
+			while($data1=$this->db->fetch_array($res)) {
 				$i++;
 				$types.="<option".(($data["type"]==$data1["id"]) ? " selected" : "")." value=\"$data1[id]\">$data1[title]</option>";
 			}
@@ -145,54 +156,54 @@ class articles {
 			$query.="$key='".$value."', ";
 		}
 		$query.="lmtime=".@time();
-		$db=new sql;
-		$db->connect();
-		$db->query("update chapters set $query where id=".$this->fields["id"]);
+		$this->db=new sql;
+		$this->db->connect();
+		$this->db->query("update articles set $query where id=".$this->fields["id"]);
 		header("Location: ?chid=".$this->chid."&m=3&id=".$this->lid);
 	}
 
 	function delete () {
-		$db=new sql;
-		$db->connect();
-		$db->query("delete from articles where id=".$this->id);
+		$this->db=new sql;
+		$this->db->connect();
+		$this->db->query("delete from articles where id=".$this->id);
 		header("Location: ?chid=".$this->chid."&m=1&id=".$this->lid);
 	}
 
 	function reorder () {
 	
-		$db=new sql;
-		$db->connect();
-		$db->query("select pid, sortorder from articles where id=".$this->eid);
-		$edata=$db->fetch_array($db->result);
-		$db->query("select pid, sortorder from articles where id=".$this->feid);
-		$fdata=$db->fetch_array($db->result);
+		$this->db=new sql;
+		$this->db->connect();
+		$this->db->query("select pid, sortorder from articles where id=".$this->eid);
+		$edata=$this->db->fetch_array($this->db->result);
+		$this->db->query("select pid, sortorder from articles where id=".$this->feid);
+		$fdata=$this->db->fetch_array($this->db->result);
 		if ($edata["pid"]<>$fdata["pid"]) {
-			$db->query("UPDATE chapters SET sortorder= sortorder+1 WHERE sortorder>=".$edata["sortorder"]." and pid=".$edata["pid"]);
-			$db->query("UPDATE chapters SET sortorder= sortorder-1 WHERE sortorder>".$fdata["sortorder"]." and pid=".$fdata["pid"]);
-			$db->query("UPDATE chapters SET sortorder=".$edata["sortorder"].", pid=".$edata["pid"]." WHERE id=".$this->feid);
+			$this->db->query("UPDATE articles SET sortorder= sortorder+1 WHERE sortorder>=".$edata["sortorder"]." and pid=".$edata["pid"]);
+			$this->db->query("UPDATE articles SET sortorder= sortorder-1 WHERE sortorder>".$fdata["sortorder"]." and pid=".$fdata["pid"]);
+			$this->db->query("UPDATE articles SET sortorder=".$edata["sortorder"].", pid=".$edata["pid"]." WHERE id=".$this->feid);
 		}
 		else {
 			if ($fdata["sortorder"]>$edata["sortorder"]) {
-				$db->query("UPDATE chapters SET sortorder= sortorder+1 WHERE sortorder<".$fdata["sortorder"]." && sortorder>=".$edata["sortorder"]."  && pid=".$fdata["pid"]);
-				$db->query("UPDATE chapters SET sortorder=".$edata["sortorder"]." WHERE id=".$this->feid);
+				$this->db->query("UPDATE articles SET sortorder= sortorder+1 WHERE sortorder<".$fdata["sortorder"]." && sortorder>=".$edata["sortorder"]."  && pid=".$fdata["pid"]);
+				$this->db->query("UPDATE articles SET sortorder=".$edata["sortorder"]." WHERE id=".$this->feid);
 			}
 			elseif ($fdata["sortorder"]<$edata["sortorder"]) {
-				$db->query("UPDATE chapters SET sortorder= sortorder-1 WHERE sortorder>".$fdata["sortorder"]." && sortorder<".$edata["sortorder"]."  && pid=".$fdata["pid"]);
-				$db->query("UPDATE chapters SET sortorder=".$edata["sortorder"]."-1  where id=".$this->feid);
+				$this->db->query("UPDATE articles SET sortorder= sortorder-1 WHERE sortorder>".$fdata["sortorder"]." && sortorder<".$edata["sortorder"]."  && pid=".$fdata["pid"]);
+				$this->db->query("UPDATE articles SET sortorder=".$edata["sortorder"]."-1  where id=".$this->feid);
 			}
 		}
 		header("Location: ?chid=".$this->chid."&id=".$this->id);
 	}
 
 	function _get_open_nodes($id) {
-		$db=new sql;
-		$db->connect();
+		$this->db=new sql;
+		$this->db->connect();
 		if ($id) {
-			$res=$db->query("select id, pid, title, LENGTH(text) as bl, url from articles where id=$id order by sortorder");
-			while ($db->num_rows($res)>0) {
-				$data=$db->fetch_array($res);
+			$res=$this->db->query("select id, pid, title, LENGTH(text) as bl, url from articles where id=$id order by sortorder");
+			while ($this->db->num_rows($res)>0) {
+				$data=$this->db->fetch_array($res);
 				$open_nodes[$data["id"]]=true;
-				$res=$db->query("select id, pid, title, LENGTH(text) as bl, url from articles where id=".$data["pid"]);
+				$res=$this->db->query("select id, pid, title, LENGTH(text) as bl, url from articles where id=".$data["pid"]);
 			}
 		}
 		return $open_nodes;
@@ -201,12 +212,12 @@ class articles {
 	function _get_tree($id=0, $open_nodes, $level=0, $counter=false) {
 		global $cid, $lid, $lang;
 		$level++;
-		$db=new sql;
-		$db->connect();
-		$res=$db->query("select id, pid, title, LENGTH(text) as bl, url, type, state from articles where pid=$id order by sortorder");
-		if ($db->num_rows($res)>0) {
+		$this->db=new sql;
+		$this->db->connect();
+		$res=$this->db->query("select id, pid, title, LENGTH(text) as bl, url, type, state from articles where pid=$id order by sortorder");
+		if ($this->db->num_rows($res)>0) {
 			$s.="\n";
-			while ($data=$db->fetch_array($res)) {
+			while ($data=$this->db->fetch_array($res)) {
 				$bl=($data["bl"]) ? number_format($data["bl"]/1024, 2, ',', ' ')."&nbsp;".__("KB") : "";
 				$gc=$this->_got_child($data["id"]);
 				$img=($gc) ? (($open_nodes[$data["id"]]) ? "minus" : "plus") : "dot";
@@ -226,10 +237,10 @@ class articles {
 	}
 
 	function _got_child($id) {
-		$db=new sql;
-		$db->connect();
-		$res=$db->query("select id, pid, title, LENGTH(text) as bl, url from articles where pid=$id");
-		return ($db->num_rows($res)>0);
+		$this->db=new sql;
+		$this->db->connect();
+		$res=$this->db->query("select id, pid, title, LENGTH(text) as bl, url from articles where pid=$id");
+		return ($this->db->num_rows($res)>0);
 	}
 }
 ?>
