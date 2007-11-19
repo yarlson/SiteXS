@@ -16,7 +16,7 @@ class subscribe {
 		$this->lst=$HTTP_POST_VARS["lst"];
 		$action=explode("_", $HTTP_GET_VARS["action"]);
 		$class[$action[1]]=" id=\"cur\"";
-		eval('$this->navBar="'.admin::template("subscribeNav").'";');
+		eval('$this->navBar="'.admin::template("subscribeNav",$this).'";');
 	}
 
 	function defaultAction () {
@@ -28,7 +28,7 @@ class subscribe {
 			$i++;
 			eval('$subscribeTR.="'.admin::template("subscribeTR").'";');
 		}
-		eval('$content="'.admin::template("subscribeMain").'";');
+		eval('$content="'.admin::template("subscribeMain",$this).'";');
 		$this->elements["content"]=$content;
 	}
 
@@ -36,7 +36,7 @@ class subscribe {
 		$this->navBar="";
 		$action="infoAddApply";
 		$header="Добавление списка рассылки";
-		eval('$content="'.admin::template("subscribeInfo", "FORMPOST", array("fields[title]"=>"EXISTS")).'";');
+		eval('$content="'.admin::template("subscribeInfo",$this)); // "FORMPOST", array("fields[title]"=>"EXISTS")).'";');
 		$this->elements["content"]=$content;
 	}
 

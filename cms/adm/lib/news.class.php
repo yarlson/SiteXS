@@ -25,12 +25,12 @@ class news {
 		$page =($this->page) ? "&page=".$this->page : "";
 		while($data=$db->fetch_array($res)) {
 			$data["date"]=($data["time"]) ? @date("d.m.Y", $data["time"]) : "";
-			eval('$newsTR.="'.admin::template("newsTR").'";');
+			eval('$newsTR.="'.admin::template("newsTR",$this).'";');
 		}
 		
 		$pageBar=$pagination->bar();
 		
-		eval('$content="'.admin::template("newsMain").'";');
+		eval('$content="'.admin::template("newsMain",$this).'";');
 		$this->elements["content"]=$content;
 	}
 
