@@ -28,6 +28,7 @@ class sql {
         if (!mysql_select_db($this->db['dbName'], $this->conn_id)) {
             $this->sql_error("Database Error");
         }
+	mysql_query("SET NAMES 'utf8'", $this->conn_id);
         return $this->conn_id;
     }
 

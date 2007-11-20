@@ -51,7 +51,7 @@ CREATE TABLE `chapters` (
   KEY `menu` (`menu`),
   FULLTEXT KEY `subtitle` (`subtitle`),
   FULLTEXT KEY `text` (`text`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 -- 
 -- Dumping data for table `chapters`
@@ -74,7 +74,7 @@ CREATE TABLE `config` (
   `descr` text,
   `text` text,
   PRIMARY KEY  (`cid`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 PACK_KEYS=0 AUTO_INCREMENT=9 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 PACK_KEYS=0 AUTO_INCREMENT=9 ;
 
 -- 
 -- Dumping data for table `config`
@@ -83,7 +83,7 @@ CREATE TABLE `config` (
 INSERT INTO `config` (`cid`, `name`, `descr`, `text`) VALUES 
 (1, 'site_name', 'Site name', 'SiteXS default web-site'),
 (2, 'email', 'E-mail', 'sample@example.org'),
-(8, 'charset', 'Charset', 'utf-8');
+(8, 'charset', 'Charset', 'utf8_general_ci');
 
 -- --------------------------------------------------------
 
@@ -104,7 +104,7 @@ CREATE TABLE `menus` (
   PRIMARY KEY  (`id`),
   KEY `type` (`type`),
   KEY `level` (`level`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 -- 
 -- Dumping data for table `menus`
@@ -128,7 +128,7 @@ CREATE TABLE `types` (
   `root` int(11) NOT NULL default '0',
   PRIMARY KEY  (`id`),
   KEY `root` (`root`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- 
 -- Dumping data for table `types`
@@ -155,7 +155,7 @@ CREATE TABLE `users` (
   `description` text,
   `admin` tinyint(4) NOT NULL default '0',
   PRIMARY KEY  (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 -- 
 -- Dumping data for table `users`

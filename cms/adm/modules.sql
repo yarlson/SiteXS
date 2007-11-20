@@ -24,7 +24,7 @@ CREATE TABLE `news` (
   `text` text NOT NULL,
   `matID` int(14) NOT NULL default '0',
   PRIMARY KEY  (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- 
 -- Дамп данных таблицы `news`
@@ -45,7 +45,7 @@ CREATE TABLE `subs_config` (
   `url` varchar(255) NOT NULL default '',
   `confirm` text NOT NULL,
   `email_from` varchar(255) NOT NULL default ''
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- 
 -- Дамп данных таблицы `subs_config`
@@ -68,7 +68,7 @@ CREATE TABLE `subs_lists` (
   `description` text,
   `lastsend` int(10) unsigned default NULL,
   PRIMARY KEY  (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- 
 -- Дамп данных таблицы `subs_lists`
@@ -91,7 +91,7 @@ CREATE TABLE `subs_messages` (
   `date_sent` int(10) unsigned NOT NULL default '0',
   `file` varchar(150) default NULL,
   PRIMARY KEY  (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- 
 -- Дамп данных таблицы `subs_messages`
@@ -109,7 +109,7 @@ CREATE TABLE `subs_subscribed` (
   `lid` int(11) unsigned default NULL,
   `sid` int(11) unsigned default NULL,
   KEY `lid` (`lid`,`sid`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- 
 -- Дамп данных таблицы `subs_subscribed`
@@ -135,7 +135,7 @@ CREATE TABLE `subs_users` (
   UNIQUE KEY `email` (`email`),
   UNIQUE KEY `salt` (`salt`),
   KEY `approved` (`approved`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- 
 -- Дамп данных таблицы `subs_users`

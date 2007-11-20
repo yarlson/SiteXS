@@ -39,7 +39,8 @@ class news {
 		$chid=$this->chid;
 		$action="appendAdd";
 		$header=__("Add new");
-		eval("\$content=\"".admin::template("newsAdd", "FORMPOST", array("fields[title]"=>"EXISTS"))."\";");
+		//eval('$content="'.admin::template("newsAdd", "FORMPOST", array("fields[title]"=>"EXISTS"))."\";");
+		eval('$content="'.admin::template("newsAdd", $this).'";');
 		$this->elements["content"]=$content;
 	}
 
@@ -74,7 +75,8 @@ class news {
 		$chid=$this->chid;
 		$action="appendEdit";
 		$header=__("Edit");
-		eval("\$content=\"".admin::template("newsAdd", "FORMPOST", array("fields[title]"=>"EXISTS"))."\";");
+		//eval("\$content=\"".admin::template("newsAdd", "FORMPOST", array("fields[title]"=>"EXISTS"))."\";");
+		eval('$content="'.admin::template("newsAdd", $this).'";');
 		$this->elements["content"]=$content;
 	}
 
