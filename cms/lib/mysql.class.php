@@ -25,6 +25,7 @@ class sql {
         if ($this->conn_id == 0) {
             $this->sql_error("Connection Error");
         }
+	mysql_query("SET NAMES 'utf8'", $this->conn_id);
         if (!mysql_select_db($this->db['dbName'], $this->conn_id)) {
             $this->sql_error("Database Error");
         }
