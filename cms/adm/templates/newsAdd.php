@@ -35,6 +35,6 @@ $message
 			<td><textarea cols=\"40\" name=\"fields[text]\" rows=\"20\">$data[text]</textarea><br><a href=\"#\" onClick=\"return showVE('$data[id]', 'fields[text]');\"><?php echo __("Visual editor") ?></a></td>
 		</tr>
 	</table>
-<p><b>*&nbsp;&mdash; <?php echo __("Must be filled") ?></b></p>
+<p><b>*&nbsp;&mdash; <?php echo __("Required fields") ?></b></p>
 <p align=\"center\"><input type=\"button\" value=\"<?php echo __("Back") ?>\" style=\"width: auto;\" onclick=\"javascript: history.go(-1);\">&nbsp;&nbsp;<input type=\"submit\" value=\"<?php echo __("Save") ?>\" style=\"width: auto;\"></p>
 </form>
