@@ -1,14 +1,11 @@
 <?php
-
 class sql {
-
     var $conn_id;
     var $result;
     var $record;
     var $db = array();
     var $port;
     var $query_count=0;
-
     function sql() {
         global $DB;
         $this->db = $DB;
@@ -19,7 +16,6 @@ class sql {
             $this->port = 3306;
         }
     }
-
     function connect() {
         $this->conn_id = mysql_connect($this->db['host'].":".$this->port,$this->db['user'],$this->db['pass']);
         if ($this->conn_id == 0) {
@@ -31,7 +27,6 @@ class sql {
 	mysql_query("SET NAMES 'utf8'", $this->conn_id);
         return $this->conn_id;
     }
-
     function query($query_string) {
         $this->result = mysql_query($query_string,$this->conn_id);
         $this->query_count++;
@@ -40,24 +35,19 @@ class sql {
         }
         return $this->result;
     }
-
     function fetch_array($query_id) {
         $this->record = mysql_fetch_array($query_id,MYSQL_ASSOC);
         return $this->record;
     }
-
     function num_rows($query_id) {
         return ($query_id) ? mysql_num_rows($query_id) : 0;
     }
-
     function num_fields($query_id) {
         return ($query_id) ? mysql_num_fields($query_id) : 0;
     }
-
     function free_result($query_id) {
         return mysql_free_result($query_id);
     }
-
     function affected_rows() {
         return mysql_affected_rows($this->conn_id);
     }
@@ -100,7 +90,6 @@ class sql {
             return false;
         }
     }
-
     function sql_error($message) {
         $description = mysql_error();
         $number = mysql_errno();
@@ -119,7 +108,5 @@ class sql {
         echo "<pre>$error</pre>";
         exit();
     }
-
 }
-
 ?>
