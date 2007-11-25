@@ -38,8 +38,6 @@ textarea, input {font-family: tahoma;width: 100%;font-size: 100%;}
 <h3><?php echo $ref->header ?></h3>
 <?php echo $ref->message ?>
 <form action="?chid=<?php echo $ref->chid ?>&action=<?php echo $ref->action ?>&lid=<?php echo $ref->lid ?>" method="post" name="FORMPOST"<?php echo $ref->onsubmit ?>>
-<input type="hidden" name="fields[article]" value="<?php echo $ref->data[article] ?>">
-<input type="hidden" name="fields[pid]" value="<?php echo $ref->data[pid] ?>">
 <p align="center"><input type="button" value="<?php echo __("Cancel") ?>" style="width: auto;" onclick="javascript: history.go(-1);">&nbsp;&nbsp;<input type="submit" value="<?php echo __("Save") ?>" class="save"></p>
 <table border="0" cellspacing="0" cellpadding="5" width="100%">
 		<tr>
@@ -47,14 +45,6 @@ textarea, input {font-family: tahoma;width: 100%;font-size: 100%;}
 			<th><?php echo __("Value") ?></th>
 		</tr>
 <?php echo $ref->id ?>
-		<tr>
-			<td class="nw"><?php echo __("Type") ?></td>
-			<td>
-			<select name="fields[type]">
-			<option></option>
-<?php echo $ref->types ?>
-			</select>
-		</tr>
 		<tr>
 			<td class="nw"><?php echo __("Date") ?></td>
 			<td><select name="date[day]"><?php echo $ref->select[day] ?></select>&nbsp;<select name="date[month]"><?php echo $ref->select[month] ?></select>&nbsp;<select name="date[year]"><?php echo $ref->select[year] ?></select></td>
@@ -76,11 +66,17 @@ textarea, input {font-family: tahoma;width: 100%;font-size: 100%;}
 			<td><textarea cols="40" name="fields[text]" rows="20" id="text" convert_this="true"><?php echo $ref->data[text] ?></textarea></td>
 		</tr>
 		<tr>
+			<td class="nw"><?php echo __("Published at") ?></td>
+			<td>
+				<div class="check_ul"><?php echo $this->chapter_tree ?></div>
+			</td>
+		</tr>
+		<tr>
 			<td class="nw"><?php echo __("State") ?></td>
 			<td>
 				<select name="fields[state]">
 					<option value="0"<?php echo $this->state_selected[0] ?> style="color: red;"><?php echo __("Hidden") ?></option>
-					<option value="1"<?php echo $this->state_selected[1] ?> style="color: blue;"><?php echo __("Shown") ?></option>
+					<option value="1"<?php echo $this->state_selected[1] ?> style="color: blue;"><?php echo __("Published") ?></option>
 				</select>
 			</td>
 		</tr>
