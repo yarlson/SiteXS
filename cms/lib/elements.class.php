@@ -87,6 +87,14 @@ class elements {
 		return "";
 	}
 
+	function articles() {
+		$res=$this->db->query("select id, title, subtitle, time from articles left join articles_chapters on articles.id=articles_chapters.article_id where chapter_id=".$this->properties["id"]." order by time desc");
+		while ($data=$this->db->fetch_array($res)) {
+			$articles="<li>".$data["title"]."</li>";
+		}
+		if ($articles) return "<ul>$articles</ul>";
+	}
+
 	function style () {
 		if (file_exists(page::getDocumentRoot()."/images/bottom/w".$this->properties["id"].".gif")) {
 			$style[1]="background: url(/images/bottom/w".$this->properties["id"].".gif) bottom right no-repeat;";

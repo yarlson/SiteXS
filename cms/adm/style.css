@@ -15,6 +15,8 @@ a:hover {
 img {
 	border: none;
 }
+ul {list-style-type: square; margin: 0; padding: 0;}
+ul li {margin: 0 0 0 1.5em; padding: 0;}
 #header {
 	background: #F8F8F3;
 	padding: 1em 2em;
@@ -32,6 +34,7 @@ img {
 	_height: 20em;
 	height: auto;
 	background: url(i/bg.gif) repeat-x top left;
+	_width: 100%;
 }
 #menu {
 	background: #EFEFE4;
@@ -107,6 +110,7 @@ img {
 	height: auto;
 	margin: 1em 20px;
 	padding: 1em;
+	_width: 100%;
 }
 #content h2 {
 	color: Black;
@@ -126,7 +130,6 @@ img {
 	border-spacing: 0px;
 	background-color : #F8F8F3;
 	width: 100%;
-	_width: auto;
 }
 #content td {
 	border: 1px solid silver;
@@ -225,3 +228,5 @@ tr.selected td {
 #buttonBar ul {border: 1px solid silver;font-size: 85%; font-family: tahoma; height: 2em; float: left; margin: 0; padding: 1em;}
 #buttonBar img {margin-right: 0.5em;}
 #buttonBar li {float: left; list-style-type: none;margin: 0 1em;; padding: 0;}
+.check_ul {margin-left: -1.5em;}
+.check_ul ul {list-style-type: none;}

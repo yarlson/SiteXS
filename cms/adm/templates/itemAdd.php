@@ -79,7 +79,7 @@ textarea, input {font-family: tahoma;width: 100%;font-size: 100%;}
 			<td>
 				<select name="fields[state]">
 					<option value="0"<?php echo $this->state_selected[0] ?> style="color: red;"><?php echo __("Hidden") ?></option>
-					<option value="1"<?php echo $this->state_selected[1] ?> style="color: blue;"><?php echo __("Shown") ?></option>
+					<option value="1"<?php echo $this->state_selected[1] ?> style="color: blue;"><?php echo __("Published") ?></option>
 				</select>
 			</td>
 		</tr>

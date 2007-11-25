@@ -60,6 +60,7 @@ class articles {
 		$ts[$this->level]=" selected";
 		$true=($this->level==4) ? " && true" : " && false";
 		$this->data["pid"]=$this->pid;
+		$this->chapter_tree=$this->_getChaptersTree();
 		$this->header=__("Add new");
 		$lid=$this->lid;
 		$library["chid"]=admin::getTypeID("library");
@@ -84,6 +85,11 @@ class articles {
 		
 		$this->select=admin::getDateSelectOptions($this->data["time"]);
 		$chid=$this->chid;
+		$res1=$this->db->query("select * from articles_chapters where article_id=".$this->id);
+		while($data1=$this->db->fetch_array($res1)) {
+			$checked_nodes[$data1["chapter_id"]]=1;
+		}
+		$this->chapter_tree=$this->_getChaptersTree(0, $checked_nodes);
 		$this->action="appendEdit";
 		$this->id='<tr>
 			<td></td>
@@ -102,6 +108,8 @@ class articles {
 	function appendAdd () {
 		session_start();
 		unset($_SESSION["wrongFields"]);
+		$chapters=$this->fields["chapters"];
+		unset($this->fields["chapters"]);
 		$this->fields["time"]=mktime(0, 0, 0, $this->date["month"], $this->date["day"], $this->date["year"]);
 		foreach($this->fields as $key => $value) {
 			$query.="$key='".$value."', ";
@@ -117,6 +125,10 @@ class articles {
 			exit;
 		}
 		$this->db->query("insert into articles set $query");
+		$last_id=$this->db->insert_id();
+		foreach($chapters as $key => $value) {
+			$this->db->query("insert into articles_chapters set article_id=".$last_id.", chapter_id=".$key);
+		}
 		header("Location: ?chid=".$this->chid."&m=2&id=".$this->lid);
 	}
 
@@ -151,6 +163,8 @@ class articles {
 	}
 
 	function appendEdit () {
+		$chapters=$this->fields["chapters"];
+		unset($this->fields["chapters"]);
 		$this->fields["time"]=mktime(0, 0, 0, $this->date["month"], $this->date["day"], $this->date["year"]);
 		foreach($this->fields as $key => $value) {
 			$query.="$key='".$value."', ";
@@ -159,6 +173,10 @@ class articles {
 		$this->db=new sql;
 		$this->db->connect();
 		$this->db->query("update articles set $query where id=".$this->fields["id"]);
+		$this->db->query("delete from articles_chapters where article_id=".$this->fields["id"]);
+		foreach($chapters as $key => $value) {
+			$this->db->query("insert into articles_chapters set article_id=".$this->fields["id"].", chapter_id=".$key);
+		}
 		header("Location: ?chid=".$this->chid."&m=3&id=".$this->lid);
 	}
 
@@ -166,6 +184,7 @@ class articles {
 		$this->db=new sql;
 		$this->db->connect();
 		$this->db->query("delete from articles where id=".$this->id);
+		$this->db->query("delete from articles_chapters where article_id=".$this->id);
 		header("Location: ?chid=".$this->chid."&m=1&id=".$this->lid);
 	}
 
@@ -195,52 +214,14 @@ class articles {
 		header("Location: ?chid=".$this->chid."&id=".$this->id);
 	}
 
-	function _get_open_nodes($id) {
-		$this->db=new sql;
-		$this->db->connect();
-		if ($id) {
-			$res=$this->db->query("select id, pid, title, LENGTH(text) as bl, url from articles where id=$id order by sortorder");
-			while ($this->db->num_rows($res)>0) {
-				$data=$this->db->fetch_array($res);
-				$open_nodes[$data["id"]]=true;
-				$res=$this->db->query("select id, pid, title, LENGTH(text) as bl, url from articles where id=".$data["pid"]);
-			}
+	function _getChaptersTree($current=0, $checked_nodes=array()) {
+		$res=$this->db->query("select id, title, pid from chapters where pid='".$current."' order by sortorder");
+		while ($data=$this->db->fetch_array($res)) {
+			$child=$this->_getChaptersTree($data["id"], $checked_nodes);
+			$tree.="<li><input type=\"checkbox\" style=\"width: 1em;\" id=\"chapter_".$data["id"]."\" name=\"fields[chapters][".$data["id"]."]\" value=\"1\"".(($checked_nodes[$data["id"]]) ? " checked" : "")." /> <label for=\"chapter_".$data["id"]."\">".$data["title"]."</label>".$child."</li>";
 		}
-		return $open_nodes;
+		if ($tree) return "<ul>".$tree."</ul>";
 	}
 	
-	function _get_tree($id=0, $open_nodes, $level=0, $counter=false) {
-		global $cid, $lid, $lang;
-		$level++;
-		$this->db=new sql;
-		$this->db->connect();
-		$res=$this->db->query("select id, pid, title, LENGTH(text) as bl, url, type, state from articles where pid=$id order by sortorder");
-		if ($this->db->num_rows($res)>0) {
-			$s.="\n";
-			while ($data=$this->db->fetch_array($res)) {
-				$bl=($data["bl"]) ? number_format($data["bl"]/1024, 2, ',', ' ')."&nbsp;".__("KB") : "";
-				$gc=$this->_got_child($data["id"]);
-				$img=($gc) ? (($open_nodes[$data["id"]]) ? "minus" : "plus") : "dot";
-				$l=($data["type"]) ? "_" : "";
-				$img1=($open_nodes[$data["id"]]) ? "folderopen".$l : "folder".$l;
-				$pid=($open_nodes[$data["id"]]) ? $data["pid"] : $data["id"];
-				$a_o=($gc) ?  "<a href=\"?chid=".$this->chid."&id=$pid\" style=\"color: black;\" id=\"tree\">" :"";
-				$a_c=($gc) ?  "</a>" :"";
-				$lid=$this->id;
-				$del=($gc || $data["id"]=="1") ? "&nbsp;<img src=\"i/dot.gif\" alt=\"\" width=\"16\" height=\"16\" border=\"0\">" : "&nbsp;<a href=\"?chid=".$this->chid."&action=delete&id=".$data["id"]."&lid=$lid\" class=\"buttons\"><img src=\"i/del.gif\" title=\"".__("Delete")."\" width=\"16\" height=\"16\" border=\"0\" onClick=\"return submit_delete(".$data["id"].")\"></a>";
-				$s.= "<tr><td><img src=\"i/dot.gif\" alt=\"\" width=\"".(($level-1)*20)."\" height=\"1\" border=\"0\">$a_o<img src=\"i/".$img.".gif\" alt=\"\" border=\"0\" align=\"absmiddle\" height=\"16\" width=\"16\"><img id=\"icon".$data["id"]."\" src=\"i/$img1.gif\" alt=\"\" border=\"0\" align=\"absmiddle\" height=\"16\" width=\"16\" hspace=\"5\" class=\"dragme\">".$data["title"]."$a_c</span></td><td style=\"color: gray;\" align=\"right\">$bl</td><td align=\"center\"><img src=\"i/".(($data["state"] ? "dot" : "hidden")).".gif\" alt=\"".(($data["state"] ? "" : __("hidden")))."\" width=\"32\" height=\"16\" border=\"0\"></td><td style=\"white-space: nowrap;\">&nbsp;&nbsp;<a href=\"?chid=".$this->chid."&action=edit&id=".$data["id"]."&lid=$lid\" class=\"buttons\"><img src=\"i/edit.gif\" title=\"".__("Edit")."\" width=\"16\" height=\"16\" border=\"0\"></a>$del&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href=\"?chid=".$this->chid."&action=add&pid=".$data["id"]."&level=".($level+1)."&lid=$lid\" class=\"buttons\"><img src=\"i/add.gif\" title=\"".__("Add new")."\" width=\"16\" height=\"16\" border=\"0\"></a>&nbsp;&nbsp;</td></tr>\n";
-				if ($open_nodes[$data["id"]]) $s.=$this->_get_tree($data["id"], $open_nodes, $level, &$counter);
-			}
-			$s.="\n";
-			return $s;
-		}
-	}
-
-	function _got_child($id) {
-		$this->db=new sql;
-		$this->db->connect();
-		$res=$this->db->query("select id, pid, title, LENGTH(text) as bl, url from articles where pid=$id");
-		return ($this->db->num_rows($res)>0);
-	}
 }
 ?>

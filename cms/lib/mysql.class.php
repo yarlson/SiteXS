@@ -86,6 +86,10 @@ class sql {
 		return $field;
     }
     
+    function insert_id() {
+        return mysql_insert_id($this->conn_id);
+    }
+    
 	function seek ($result, $number) {
 		mysql_data_seek ($result, $number);
 	}

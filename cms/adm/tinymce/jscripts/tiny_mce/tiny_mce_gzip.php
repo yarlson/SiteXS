@@ -2,7 +2,7 @@
 /**
  * $RCSfile: tiny_mce_gzip.php,v $
  * $Revision: 1.1 $
- * $Date: 2006-07-06 15:23:14 $
+ * $Date: 2006/07/06 15:23:14 $
  *
  * @version 1.08
  * @author Moxiecode

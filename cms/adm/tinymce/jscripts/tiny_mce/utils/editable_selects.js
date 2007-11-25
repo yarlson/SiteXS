@@ -1,5 +1,5 @@
 /**
- * $Id: editable_selects.js,v 1.2 2007-01-29 07:03:42 yarlson Exp $
+ * $Id: editable_selects.js,v 1.2 2007/01/29 07:03:42 yarlson Exp $
  *
  * Makes select boxes editable.
  *

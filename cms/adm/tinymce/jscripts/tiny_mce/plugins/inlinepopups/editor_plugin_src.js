@@ -1,5 +1,5 @@
 /**
- * $Id: editor_plugin_src.js,v 1.2 2007-01-29 07:03:29 yarlson Exp $
+ * $Id: editor_plugin_src.js,v 1.2 2007/01/29 07:03:29 yarlson Exp $
  *
  * Moxiecode DHTML Windows script.
  *

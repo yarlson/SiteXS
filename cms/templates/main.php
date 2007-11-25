@@ -27,6 +27,7 @@
 	<div id="content" class="narrowcolumn">
 <?php echo $ref->elements["contenttitle"] ?>
 <?php echo $ref->elements["content"] ?>
+<?php echo $ref->elements["articles"] ?>
 	</div>
 	<div id="sidebar">
 <ul>
