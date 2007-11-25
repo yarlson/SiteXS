@@ -1,5 +1,5 @@
 <?php
-header("Content-type: text/html; charset=windows-1251");
+header("Content-type: text/html; charset=utf-8");
 $dr=preg_replace("'/$'", "", getenv("DOCUMENT_ROOT"));
 include $dr."/lib/streams.php";
 include $dr."/lib/gettext.php";

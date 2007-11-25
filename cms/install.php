@@ -92,18 +92,8 @@ switch ($step) {
 			if (!$db_sel) $db_cr=@mysql_query("create database ".$_POST["dbname"], $db);
 			if (mysql_affected_rows($db)) $db_sel=@mysql_select_db($_POST["dbname"], $db);
 			if ($db_sel){
-				$templine = '';
-				$lines = file("adm/sitexs.sql");
-				mysql_query("SET NAMES 'utf8'", $db);
-				foreach ($lines as $line_num => $line) {
-					if (substr($line, 0, 2) != '--' && $line != '') {
-						$templine .= $line;
-						if (substr(trim($line), -1, 1) == ';') {
-							mysql_query($templine, $db);
-							$templine = '';
-						}
-					}
-				}
+				db_import("adm/sitexs.sql", $db);
+				db_import("adm/modules.sql", $db);
 				if(is_writable("lib/db.conf.php")) {
 					$f=fopen("lib/db.conf.php", "w+");
 					$conf=array("<?php", "\$DB[\"host\"]=\"".$_POST["dbhost"]."\";", "\$DB[\"dbName\"]=\"".$_POST["dbname"]."\";", "\$DB[\"user\"]=\"".$_POST["dbuser"]."\";", "\$DB[\"pass\"]=\"".$_POST["dbpassword"]."\";", "?>");
@@ -141,3 +131,18 @@ switch ($step) {
 </table>
 </body>
 </html>
+<?php
+function db_import($file_name, $db) {
+	$templine = '';
+	$lines = file($file_name);
+	foreach ($lines as $line_num => $line) {
+		if (substr($line, 0, 2) != '--' && $line != '') {
+			$templine .= $line;
+			if (substr(trim($line), -1, 1) == ';') {
+				mysql_query($templine, $db);
+				$templine = '';
+			}
+		}
+	}
+}
+?>
