@@ -1,0 +1,1 @@
+<li id="current"><a href="?chid=<?php echo $ref->i ?>"><?php echo $ref->nameI ?></a></li>

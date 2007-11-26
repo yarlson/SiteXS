@@ -1,0 +1,227 @@
+body {
+	font-size: 82%;
+	margin: 0;
+	font-family: tahoma;
+}
+table, p, div {
+	font-size: 100%;;
+}
+a, a:visited {
+	color: #00274F;
+}
+a:hover {
+	color: #8B0000;
+}
+img {
+	border: none;
+}
+#header {
+	background: #F8F8F3;
+	padding: 1em 2em;
+}
+#header div {
+	float: right;
+}
+#login {
+	font-size: 90%;
+	line-height: 20px;
+	float: right;
+}
+#container {
+	min-height: 20em;
+	_height: 20em;
+	height: auto;
+	background: url(i/bg.gif) repeat-x top left;
+}
+#menu {
+	background: #EFEFE4;
+	font-size: 1.6em;
+	height: 2em;
+	margin: 0 20px;
+}
+#menu ul,#menu ul li{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	background: #EFEFE4;
+}
+#menu ul {
+
+}
+#menu ul li {
+	float: left;
+	text-align: left;
+	margin-right: 0.5em;
+}
+#menu ul a{
+	float: left;
+	padding: 5px 0;
+	text-decoration: none;
+}
+#menu ul span {
+	float: left;
+	padding: 5px 0;
+}
+
+#menu ul li#current, #menu ul li#current a {
+	font-weight: bold;
+}
+
+#submenu {
+	background: #E6E6DA;
+	font-size: 1em;
+	height: 2em;
+	clear: both;
+	margin: 0 20px;
+}
+#submenu ul,#submenu ul li{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+#submenu ul {
+	background:#D1D4C0;
+}
+#submenu ul li {
+	float: left;
+	text-align: left;
+	margin-right: 0.5em;
+}
+#submenu ul a{
+	float: left;
+	padding: 5px 0;
+	text-decoration: none;
+}
+#submenu ul span {
+	float: left;
+	padding: 5px 0;
+}
+
+#submenu ul li#current, #submenu ul li#current a {
+	font-weight: bold;
+}
+#content {
+	background: #FFF;
+	min-height: 300px;
+	_height: 300px;
+	height: auto;
+	margin: 1em 20px;
+	padding: 1em;
+}
+#content h2 {
+	color: Black;
+	font-size : 1.6em;
+	margin-top: 0px;
+	font-weight: normal;
+}
+#content h3 {
+	font-size : 1.4em;
+	font-weight: normal;
+}
+#content #cins {
+	padding: 0px 10px 10px 10px;
+}
+#content table {
+	border-collapse: collapse;
+	border-spacing: 0px;
+	background-color : #F8F8F3;
+	width: 100%;
+	_width: auto;
+}
+#content td {
+	border: 1px solid silver;
+	padding: 5px;
+}
+#content td.nw, #content th.nw{
+	white-space: nowrap;
+}
+#content th {
+	border: 1px solid silver;
+	padding: 5px;
+	background-color: #EFEFE4;
+}
+
+#content table.noborder {
+	border-collapse: collapse;
+	border-spacing: 0px;
+	background-color : #FBFBFB;
+}
+#content .noborder td {
+	border: 0px solid silver;
+	padding: 5px;
+}
+#content .noborder th {
+	border: 0px solid silver;
+	padding: 5px;
+}
+#content ul#info {
+	line-height: 18px;
+}
+#quest {
+	margin-top: 20px;
+}
+#content .error {
+	border: 1px solid red;
+	background-color: #F8F8F3;
+	color: red;
+	padding: 10px;
+	margin-bottom: 1em;
+	width: 50%;
+}
+#content .message{
+	border: 1px solid Green;
+	background-color: #F8F8F3;
+	color: Green;
+	padding: 10px;
+	width: 50%;
+}
+.drag {
+	background-color : #EFEFE4;
+	position : absolute;
+	border : 1px solid Silver;
+	padding : 3px;
+}
+.pagebar {
+	background : #F8F8F3;
+	padding: 3px;
+}
+ {
+	margin-left: 1em;
+}
+ td {
+	border-bottom-width: 0px;
+}
+ #cur {
+	border-top: 1px solid #FF9200;
+	background-color: #ffffff;
+	font-weight: bold;
+}
+#inside td {
+	background: #FBFBFB;
+	padding: 2em;
+}
+#inside td td {
+	background-color : #F8F8F3;
+	padding:0.5em;
+}
+#inside table td {
+padding: 0.5em;
+}
+.save {background: #FF9200; color: white; width: 10em; font-weight: bold}
+#content table.big {font-size: 2em; width: auto;}
+.big input {font-size: 100%; width: 10em;}
+.signin {background: #FF9200; color: white; font-size: 2em;}
+.addnew {font-size: 1.5em;}
+
+.clear {clear: both;}
+
+tr.default  {
+	background-color: #F8F8F3;
+}
+tr.selected td {
+	background-color: #EFEFE4;
+}
+#buttonBar {text-align: center; padding-top: 1em;}
+#buttonBar ul {border: 1px solid silver;font-size: 85%; font-family: tahoma; height: 2em; float: left; margin: 0; padding: 1em;}
+#buttonBar img {margin-right: 0.5em;}
+#buttonBar li {float: left; list-style-type: none;margin: 0 1em;; padding: 0;}
